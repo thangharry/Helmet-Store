@@ -53,49 +53,6 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 assignDetails()
 assignCartEvent()
 assignHeartEvent()
-
-// recent blog posts
-const recentBlogs = blogList.slice(4, 6)
-const recentBlogsHTML = recentBlogs.map(blog => `
-            <div class="col-md-6">
-                <div class="card mb-7 rounded-4 border-0 shadow">
-                    <div class="crop">
-                        <img class="card-img-top rounded-4" src=${blog.img} alt="Card image">
-                    </div>
-                    <div class="card-body px-5">
-                        <div class="card-info my-4 d-flex flex-row align-items-center">
-                            <div onclick="filterCat('${blog.cat}')">
-                                <a href="#"
-                                    class="category text-decoration-none text-black bg-warning-subtle rounded-4 me-2 px-3 py-2">${blog.cat}</a>
-                            </div>
-                            <div onclick="filterAuthor('${blog.author}')" class="m-0 me-2 p-0">
-                                <a href="#" class="author text-decoration-none text-secondary">
-                                    <span class="me-2"><i class="fa-solid fa-user text-primary"></i></span>
-                                    ${blog.author}
-                                </a>
-                            </div>
-                            <a href="#" class="time text-decoration-none text-secondary">
-                                <span class="me-2"><i class="fas fa-calendar-alt fa-solid text-primary"></i></span>
-                                ${blog.time}
-                            </a>
-                        </div class="m-0 p-0">
-                        <div value="${blog.value}" onclick="getSelectedPost()">
-                            <a href="blog-detail.html" class="card-title text-decoration-none fs-3 fw-bold">${blog.title}</a>
-                        </div>
-                        <p class="card-text text-secondary mt-4 mb-5">${blog.content.substring(0, 200) + '[...]'}</p>
-                        <div value="${blog.value}" onclick="getSelectedPost()">
-                            <a href="blog-detail.html" class="btnReadmore btn btn-primary">
-                                <span class="readmore me-2 text-uppercase fw-bold">Read more</span>
-                                <span><i class="fas fa-play-circle fa-solid text-black"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>        
-        `)
-recentBlogsHTML.forEach(blog => {
-    document.querySelector(".blog-container").innerHTML += blog
-})
 function getSelectedPost(event) {
     localStorage.setItem("selectedPost", event.currentTarget.getAttribute("value"));
 }

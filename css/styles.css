@@ -39,18 +39,6 @@
     transition: all 200ms ease-in-out;
 }
 
-.header-img-1 {
-    transform: rotate(15deg);
-}
-
-.header-img-2 {
-    transform: rotate(-7deg) translateY(-50px);
-}
-
-.header-img-3 {
-    top: -50px;
-    left: -60px;
-}
 
 .details-1-bg-1 {
     top: 200px;
@@ -110,10 +98,8 @@
     max-width: 100%;
 }
 
-.header {
-    background: url("/images/header-bg-curly.png"),
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("/images/peakpx.jpg") center center no-repeat;
+.header img {
+    width: 100%;
     background-size: cover;
 }
 
@@ -172,12 +158,6 @@
     background-size: cover;
 }
 
-.blog-post {
-    --clr-background: #ededed;
-    background: url("/images/8.png"),
-        linear-gradient(var(--clr-background), var(--clr-background));
-    background-size: cover;
-}
 
 .footer {
     --clr-background: #4f4137;
@@ -200,6 +180,8 @@
 .nav-link {
     margin-inline: 1rem;
     padding: 0.5rem 0;
+    color: black;
+    font-size: 22px;
 }
 
 .nav-link .nav-link-hover {
@@ -418,12 +400,6 @@
     .header-heading {
         font-size: 2.3rem;
         text-align: center;
-    }
-
-    .header-img-3 {
-        width: 80px;
-        top: -35px;
-        left: -10px;
     }
 
     .statistic-img-1 {
@@ -748,6 +724,7 @@
 .font-25px {
     font-size: 25px;
 }
+
 .range__value {
     cursor: pointer;
     width: 20px;
@@ -1084,11 +1061,13 @@
 .close-filter-on-table-mobile-sidebar {
     z-index: 999;
 }
+
 .direction {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .direction-link {
     border: none;
     outline: none;
@@ -1473,8 +1452,7 @@ ul {
     }
 }
 
-@media (max-width: 1140px) {
-}
+@media (max-width: 1140px) {}
 
 @media (max-width: 992px) {
     #contact .section-one .box {
@@ -2307,12 +2285,14 @@ ul {
     opacity: 0;
     transition: opacity 1s ease;
 }
+
 .dauchamamucam {
     width: 8px;
     height: 8px;
     background-color: rgb(255, 174, 0);
     border-radius: 50%;
 }
+
 .direction-link a:hover {
     color: rgb(255, 174, 0) !important;
 }
