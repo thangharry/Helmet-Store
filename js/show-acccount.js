@@ -30,13 +30,13 @@ function showAccount() {
             <a class="nav-link p-0 dropdown-toggle not-sign-in" data-bs-toggle="dropdown" aria-expanded="false"
                 href="#">
                 <span class="me-2"><i class="fa-solid fa-user text-primary"></i></span>
-                Sign In
+                Đăng nhập
             </a>
             <div class="dropdown-menu not-sign-in p-0">
                 <div class="sign-in border border-primary px-4 pt-5 pb-3 bg-light text-black"
                     style="min-width: 400px;">
                     <div class="d-flex justify-content-between mb-2">
-                        <h3>Sign in</h3>
+                        <h3>Đăng nhập</h3>
                         <a href="register.html" class="text-primary">Create an Account</a>
                     </div>
                     <div class="authentication-message">
