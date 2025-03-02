@@ -3,9 +3,9 @@ const productList = [
     {
         code: "MSP1",
         imgUrl: "./images/shop-img-1.jpg",
-        name: "Intelligent Marble Knife",
+        name: "NÓN BẢO HIỂM MC0244A-0TR1P",
         discount: 0,
-        price: 134.27,
+        price: 950000,
         categories: ["Vitamins", "Supplements"],
         desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, doloribus ut omnis obcaecati excepturi facilis placeat, reprehenderit sed quo ad labore inventore illum nihil molestias rerum quaerat pariatur tempora. Consectetur!",
         brand: "Ainsworth",
@@ -13,9 +13,9 @@ const productList = [
     {
         code: "MSP2",
         imgUrl: "./images/shop-img-2.jpg",
-        name: "Intelligent Marble Knife",
+        name: "NÓN BẢO HIỂM XH001-89C-TRCM1",
         discount: 10,
-        price: 534.27,
+        price: 950000,
         categories: [
             "Uncategorized",
             "Veterinary Diets",
@@ -29,9 +29,9 @@ const productList = [
     {
         code: "MSP3",
         imgUrl: "./images/shop-img-3.jpg",
-        name: "Intelligent Marble Knife",
+        name: "MŨ BẢO HIỂM KÍNH KT-HG359",
         discount: 20,
-        price: 143.0,
+        price: 800000,
         categories: [
             "Fresh & Prepared Meal",
             "Healthacare",
@@ -45,9 +45,9 @@ const productList = [
     {
         code: "MSP4",
         imgUrl: "./images/shop-img-4.jpg",
-        name: "Intelligent Marble Knife",
+        name: "MŨ BẢO HIỂM OTG-DN052",
         discount: 15,
-        price: 1000.5,
+        price: 650000,
         categories: [
             "Veterinary Diets",
             "Healthacare",
