@@ -147,6 +147,7 @@
     background: url("/images/helmet.jpg") center center no-repeat,
         url("/images/ytb-play-bg.jpg") center center no-repeat;
     background-size: cover;
+    padding: 0 !important;
 }
 
 .experts {
@@ -1457,7 +1458,8 @@ ul {
     }
 }
 
-@media (max-width: 1140px) {}
+@media (max-width: 1140px) {
+}
 
 @media (max-width: 992px) {
     #contact .section-one .box {
@@ -2307,7 +2309,7 @@ ul {
 .header .carousel-inner img {
     width: 100% !important;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .header .carousel-indicators {
@@ -2335,6 +2337,6 @@ ul {
     width: 240px;
 }
 
-.wrap_content_footer>p {
+.wrap_content_footer > p {
     margin-bottom: 0 !important;
 }
