@@ -1822,7 +1822,7 @@ ul {
 /* End Section-three */
 /* Start Section-four */
 #about .section-four {
-    background-image: url(../images/pattern.png);
+    /* background-image: url(../images/pattern.png); */
     background-color: #e6e6e0;
     padding: 80px 30px;
     position: relative;
@@ -2285,9 +2285,9 @@ ul {
 }
 
 .back-to-top {
-    position: fixed;
+    position: fixed !important;
     bottom: 3%;
-    right: 3%;
+    right: 3% !important;
     z-index: 999;
     opacity: 0;
     transition: opacity 1s ease;
@@ -2328,9 +2328,11 @@ ul {
 }
 
 .subscribe img {
-    width: 95%;
+    width: 1200px !important;
     height: 95%;
+    object-fit: cover;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .offset-md-2 {
@@ -2339,4 +2341,78 @@ ul {
 
 .wrap_content_footer > p {
     margin-bottom: 0 !important;
+}
+.bgAbout {
+    width: 100% !important;
+    height: 650px !important;
+}
+.navigationAbout {
+    position: relative !important;
+}
+.titleAbout {
+    color: #ffc107;
+}
+.soganAbout {
+    margin-top: 52px;
+    font-weight: 600;
+    font-size: 72px;
+    font-style: italic;
+}
+.titlesxMubaohiem,
+.thuongHieu_title_h2,
+.chungNhan_title_h2 {
+    background-color: #000;
+    margin-bottom: 100px;
+}
+.sxMubaohiem {
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.gdtk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.wrap_img_About {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    background-color: red;
+}
+.gdsx_title {
+    max-width: 100% !important;
+    font-size: 20px !important;
+}
+.thuongHieu_title_h2,
+.chungNhan_title_h2 {
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 40px !important;
+}
+.wrap_thuongHieu .row,
+.wrap_chungnhaan .row {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrap_thuongHieu img,
+.wrap_chungnhaan img {
+    width: 100%;
+}
+.wrap_thuongHieu .row div ~ div,
+.wrap_chungnhaan .row div ~ div {
+    margin-left: 50px;
+}
+.section-five {
+    margin-bottom: 0 !important;
+    padding-top: 40px !important;
+}
+.title_team {
+    margin-bottom: 40px !important;
+}
+.btnabout {
+    background-color: #0f1e31 !important;
+    color: #fff;
 }
