@@ -1,789 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Helmet Store</title>
-        <link rel="icon" type="image/png" href="images/iconhelmet.png" />
 
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helmet Store</title>
+    <link rel="icon" type="image/png" href="images/iconhelmet.png" />
 
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="css/fontawesome.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
 
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="css/googlefont.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/fontawesome.css" />
 
-        <!-- Custom Styles -->
-        <link rel="stylesheet" href="css/styles.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <style>
-            .breadcrumb-wrapper {
-                background: url("images/bg-curly-dark.png"),
-                    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                    url("./images/bgAbout.webp") center center no-repeat;
-                background-size: cover;
-            }
-        </style>
-    </head>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="css/googlefont.css" />
 
-    <body>
-        <nav
-            class="navbar navbar-expand-lg navbar-dark position-absolute w-100 navigationAbout"
-            style="font-size: 14px"
-        >
-            <div class="container-fluid">
-                <!-- the hamburger -->
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#navbar-on-mobile"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .breadcrumb-wrapper {
+            background: url("images/bg-curly-dark.png"),
+                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                url("./images/bgAbout.webp") center center no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
 
-                <!-- the brand -->
-                <a class="navbar-brand mx-auto" href="home.html">
-                    <img src="images/iconhelmet.png" style="width: 75px" />
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 navigationAbout" style="font-size: 14px">
+        <div class="container-fluid">
+            <!-- the hamburger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar-on-mobile">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- the brand -->
+            <a class="navbar-brand mx-auto" href="home.html">
+                <img src="images/iconhelmet.png" style="width: 75px" />
+            </a>
+
+            <!-- the cart on small screen => mobile -->
+            <li class="ms-auto d-inline-block d-lg-none cart-show">
+                <a class="nav-link-mobile p-0" data-bs-toggle="offcanvas" data-bs-target="#shoppingCartOffcanvas">
+                    <span><i class="fa-solid fa-cart-shopping text-primary"></i></span>
                 </a>
+            </li>
 
-                <!-- the cart on small screen => mobile -->
-                <li class="ms-auto d-inline-block d-lg-none cart-show">
-                    <a
-                        class="nav-link-mobile p-0"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#shoppingCartOffcanvas"
-                    >
-                        <span
-                            ><i
-                                class="fa-solid fa-cart-shopping text-primary"
-                            ></i
-                        ></span>
-                    </a>
-                </li>
+            <!-- the nav bar on large screen => desktop -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav navbar-nav-1 ms-lg-6 mb-lg-0 fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-hover" aria-current="page" href="home.html">
+                            <span class="nav-link-hover">Trang Chủ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-hover" href="shop.html">
+                            <span class="nav-link-hover">Cửa Hàng</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-link-hover" href="about.html">
+                            <span class="nav-link-hover">Về Chúng Tôi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-hover" href="contact.html">
+                            <span class="nav-link-hover">Liên Hệ</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-2 ms-auto mb-2 mb-lg-0 fw-bold d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="store-locator.html">
+                            <span class="me-2"><i class="fa-solid fa-location-dot text-primary"></i></span>
+                            Địa Chỉ
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown dropstart account">
+                        <span class="me-2"><i class="fa-solid fa-location-dot text-primary"></i></span>
+                        Đăng nhập
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#" data-bs-toggle="offcanvas"
+                            data-bs-target="#shoppingCartOffcanvas">
+                            <span class="me-2"><i class="fa-solid fa-cart-shopping text-primary"></i></span>
+                            Giỏ hàng
+                            <span class="fa-stack ms-1" style="font-size: 10px">
+                                <i class="fas fa-circle text-primary fa-stack-2x"></i>
+                                <p class="fa-stack-1x text-black cart-count">
+                                    0
+                                </p>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-                <!-- the nav bar on large screen => desktop -->
-                <div
-                    class="collapse navbar-collapse"
-                    id="navbarSupportedContent"
-                >
-                    <ul class="navbar-nav navbar-nav-1 ms-lg-6 mb-lg-0 fw-bold">
-                        <li class="nav-item">
-                            <a
-                                class="nav-link nav-link-hover"
-                                aria-current="page"
-                                href="home.html"
-                            >
-                                <span class="nav-link-hover">Trang Chủ</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-link-hover" href="shop.html">
-                                <span class="nav-link-hover">Cửa Hàng</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a
-                                class="nav-link active nav-link-hover"
-                                href="about.html"
-                            >
-                                <span class="nav-link-hover">Về Chúng Tôi</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a
-                                class="nav-link nav-link-hover"
-                                href="contact.html"
-                            >
-                                <span class="nav-link-hover">Liên Hệ</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul
-                        class="navbar-nav navbar-nav-2 ms-auto mb-2 mb-lg-0 fw-bold d-flex"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link p-0" href="store-locator.html">
-                                <span class="me-2"
-                                    ><i
-                                        class="fa-solid fa-location-dot text-primary"
-                                    ></i
-                                ></span>
-                                Địa Chỉ
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown dropstart account">
-                            <span class="me-2"
-                                ><i
-                                    class="fa-solid fa-location-dot text-primary"
-                                ></i
-                            ></span>
-                            Đăng nhập
-                        </li>
-                        <li class="nav-item">
-                            <a
-                                class="nav-link p-0"
-                                href="#"
-                                data-bs-toggle="offcanvas"
-                                data-bs-target="#shoppingCartOffcanvas"
-                            >
-                                <span class="me-2"
-                                    ><i
-                                        class="fa-solid fa-cart-shopping text-primary"
-                                    ></i
-                                ></span>
-                                Giỏ hàng
-                                <span
-                                    class="fa-stack ms-1"
-                                    style="font-size: 10px"
-                                >
-                                    <i
-                                        class="fas fa-circle text-primary fa-stack-2x"
-                                    ></i>
-                                    <p
-                                        class="fa-stack-1x text-black cart-count"
-                                    >
-                                        0
-                                    </p>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
+    <section class="breadcrumb-wrapper bg-black text-white pt-8 pb-8 bgAbout">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+                    <!-- Change into the name of the page -->
+                    <h2 class="fw-bold display-2 titleAbout">
+                        VỀ CHÚNG TÔI
+                    </h2>
+                    <div class="d-flex gap-2 lg-text">
+                        <a href="home.html" class="m-0 text-decoration-none link-light">Home Page</a>
+                        <span class="text-primary">
+                            <i class="fas fa-circle" style="transform: scale(0.5)"></i>
+                        </span>
+                        <!-- Change into the name of the page -->
+                        <p class="m-0 text-white-50">About</p>
+                    </div>
+                    <h3 class="soganAbout">NỔI BẬT SỰ LỰA CHỌN CỦA BẠN</h3>
                 </div>
             </div>
-        </nav>
+        </div>
+    </section>
 
-        <section
-            class="breadcrumb-wrapper bg-black text-white pt-8 pb-8 bgAbout"
-        >
+    <!-- Your code goes here -->
+    <main id="about">
+        <div class="container">
+            <section class="section-three">
+                <div class="title titlesxMubaohiem">
+                    <h2 class="sxMubaohiem">
+                        Quy trình sản xuất mũ bảo hiểm
+                    </h2>
+                </div>
+
+                <div class="row gdtk">
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                        <div class="icon wrap_img_About">
+                            <img src="./images/tk1.jpg" alt="" />
+                        </div>
+                        <div class="gdsx_title title-animal">
+                            NGHIÊN CỨU THIẾT KẾ
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                        <div class="icon wrap_img_About">
+                            <img src="./images/tk2.webp" alt="" />
+                        </div>
+                        <div class="gdsx_title title-animal">
+                            SẢN XUẤT KHUÔN MẪU
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                        <div class="icon wrap_img_About">
+                            <img src="./images/tk3.png" alt="" />
+                        </div>
+                        <div class="gdsx_title title-animal-3">ÉP NHỰA</div>
+                    </div>
+                </div>
+                <div class="row gdtk">
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                        <div class="icon wrap_img_About">
+                            <img src="./images/tk4.jpg" alt="" />
+                        </div>
+                        <div class="gdsx_title title-animal">ÉP XỐP</div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                        <div class="icon wrap_img_About">
+                            <img src="./images/tk5.jpg" alt="" />
+                        </div>
+                        <div class="gdsx_title title-animal">LÀM MỘC</div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                        <div class="icon wrap_img_About">
+                            <img src="./images/tk6.jpg" alt="" />
+                        </div>
+                        <div class="gdsx_title title-animal-3">
+                            CÔNG ĐOẠN SƠN
+                        </div>
+                    </div>
+                </div>
+                <div class="row gdtk">
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                        <div class="icon wrap_img_About">
+                            <img src="./images/tk7.jpg" alt="" />
+                        </div>
+                        <div class="gdsx_title title-animal">DÁN TEM</div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                        <div class="icon wrap_img_About">
+                            <img src="./images/tk8.webp" alt="" />
+                        </div>
+                        <div class="gdsx_title title-animal">LÁP RÁP</div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                        <div class="icon wrap_img_About">
+                            <img src="./images/tk9.jpg" alt="" />
+                        </div>
+                        <div class="gdsx_title title-animal-3">
+                            THÀNH PHẨM HOÀN THIỆN
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="section-four">
             <div class="container">
                 <div class="row">
-                    <div
-                        class="d-flex flex-column justify-content-center align-items-center gap-2"
-                    >
-                        <!-- Change into the name of the page -->
-                        <h2 class="fw-bold display-2 titleAbout">
-                            VỀ CHÚNG TÔI
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <h2 class="title_team">
+                            Đội ngũ chuyên gia của chúng tôi
                         </h2>
-                        <div class="d-flex gap-2 lg-text">
-                            <a
-                                href="home.html"
-                                class="m-0 text-decoration-none link-light"
-                                >Home Page</a
-                            >
-                            <span class="text-primary">
-                                <i
-                                    class="fas fa-circle"
-                                    style="transform: scale(0.5)"
-                                ></i>
-                            </span>
-                            <!-- Change into the name of the page -->
-                            <p class="m-0 text-white-50">About</p>
+
+                        <div class="decs">
+                            Chúng tôi tự hào có đội ngũ chuyên gia giàu kinh
+                            nghiệm trong lĩnh vực sản xuất và kiểm định nón
+                            bảo hiểm. Họ là những người luôn nỗ lực để mang
+                            đến cho khách hàng những sản phẩm chất lượng và
+                            an toàn nhất.
                         </div>
-                        <h3 class="soganAbout">NỔI BẬT SỰ LỰA CHỌN CỦA BẠN</h3>
+                        <div class="d-flex p-0">
+                            <div class="button hstack gap-3">
+                                <a href="shop.html" class="btn btn-primary text-uppercase fw-bold py-3 btnabout">
+                                    XEM SẢN PHẨM
+                                    <span class="fa-stack super-sm-text ms-1" style="margin-bottom: 2px">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fas fa-play fa-stack-1x text-primary"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                        <div class="box">
+                            <div class="img-1">
+                                <img src="images/aboutUser1.png" alt="" />
+                                <ul class="list">
+                                    <li>
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-brands fa-pinterest"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="name">TRẦN VĂN THẮNG</div>
+                            <div class="desc">
+                                Với hơn 20 năm kinh nghiệm trong ngành sản
+                                xuất nón bảo hiểm, tôi luôn đặt sự an toàn
+                                của khách hàng lên hàng đầu.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                        <div class="box">
+                            <div class="img-1">
+                                <img src="images/aboutUser2.png" alt="" />
+                                <ul class="list">
+                                    <li>
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-brands fa-pinterest"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="name">NGUYỄN VĂN TÂN</div>
+                            <div class="desc">
+                                Kĩ sư trưởng thiết kế và phát triển các dòng
+                                nón bảo hiểm mới nhất của chúng tôi.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Your code goes here -->
-        <main id="about">
+        <section class="section-five">
             <div class="container">
-                <section class="section-three">
-                    <div class="title titlesxMubaohiem">
-                        <h2 class="sxMubaohiem">
-                            Quy trình sản xuất mũ bảo hiểm
-                        </h2>
-                    </div>
+                <div class="box">
+                    <h2 class="title thuongHieu_title_h2">
+                        THƯƠNG HIỆU THUỘC TẬP ĐOÀN
+                    </h2>
 
-                    <div class="row gdtk">
-                        <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                        >
-                            <div class="icon wrap_img_About">
-                                <img src="./images/tk1.jpg" alt="" />
-                            </div>
-                            <div class="gdsx_title title-animal">
-                                NGHIÊN CỨU THIẾT KẾ
-                            </div>
-                        </div>
-                        <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                        >
-                            <div class="icon wrap_img_About">
-                                <img src="./images/tk2.webp" alt="" />
-                            </div>
-                            <div class="gdsx_title title-animal">
-                                SẢN XUẤT KHUÔN MẪU
-                            </div>
-                        </div>
-                        <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                        >
-                            <div class="icon wrap_img_About">
-                                <img src="./images/tk3.png" alt="" />
-                            </div>
-                            <div class="gdsx_title title-animal-3">ÉP NHỰA</div>
-                        </div>
-                    </div>
-                    <div class="row gdtk">
-                        <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                        >
-                            <div class="icon wrap_img_About">
-                                <img src="./images/tk4.jpg" alt="" />
-                            </div>
-                            <div class="gdsx_title title-animal">ÉP XỐP</div>
-                        </div>
-                        <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                        >
-                            <div class="icon wrap_img_About">
-                                <img src="./images/tk5.jpg" alt="" />
-                            </div>
-                            <div class="gdsx_title title-animal">LÀM MỘC</div>
-                        </div>
-                        <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                        >
-                            <div class="icon wrap_img_About">
-                                <img src="./images/tk6.jpg" alt="" />
-                            </div>
-                            <div class="gdsx_title title-animal-3">
-                                CÔNG ĐOẠN SƠN
+                    <div class="container">
+                        <div class="wrap_thuongHieu">
+                            <div class="row">
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                                    <div class="thuongHieu">
+                                        <img src="./images/th1.png" alt="" />
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                                    <div class="thuongHieu">
+                                        <img src="./images/th2.png" alt="" />
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                                    <div class="thuongHieu">
+                                        <img src="./images/th3.png" alt="" />
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                                    <div class="thuongHieu">
+                                        <img src="./images/th4.png" alt="" />
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                                    <div class="thuongHieu">
+                                        <img src="./images/th5.png" alt="" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row gdtk">
-                        <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                        >
-                            <div class="icon wrap_img_About">
-                                <img src="./images/tk7.jpg" alt="" />
-                            </div>
-                            <div class="gdsx_title title-animal">DÁN TEM</div>
-                        </div>
-                        <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                        >
-                            <div class="icon wrap_img_About">
-                                <img src="./images/tk8.webp" alt="" />
-                            </div>
-                            <div class="gdsx_title title-animal">LÁP RÁP</div>
-                        </div>
-                        <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                        >
-                            <div class="icon wrap_img_About">
-                                <img src="./images/tk9.jpg" alt="" />
-                            </div>
-                            <div class="gdsx_title title-animal-3">
-                                THÀNH PHẨM HOÀN THIỆN
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </div>
             </div>
-            <section class="section-four">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                            <h2 class="title_team">
-                                Đội ngũ chuyên gia của chúng tôi
-                            </h2>
-
-                            <div class="decs">
-                                Chúng tôi tự hào có đội ngũ chuyên gia giàu kinh
-                                nghiệm trong lĩnh vực sản xuất và kiểm định nón
-                                bảo hiểm. Họ là những người luôn nỗ lực để mang
-                                đến cho khách hàng những sản phẩm chất lượng và
-                                an toàn nhất.
-                            </div>
-                            <div class="d-flex p-0">
-                                <div class="button hstack gap-3">
-                                    <a
-                                        href="shop.html"
-                                        class="btn btn-primary text-uppercase fw-bold py-3 btnabout"
-                                    >
-                                        XEM SẢN PHẨM
-                                        <span
-                                            class="fa-stack super-sm-text ms-1"
-                                            style="margin-bottom: 2px"
-                                        >
-                                            <i
-                                                class="fas fa-circle fa-stack-2x"
-                                            ></i>
-                                            <i
-                                                class="fas fa-play fa-stack-1x text-primary"
-                                            ></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
-                            <div class="box">
-                                <div class="img-1">
-                                    <img src="images/aboutUser1.png" alt="" />
-                                    <ul class="list">
-                                        <li>
-                                            <i
-                                                class="fa-brands fa-instagram"
-                                            ></i>
-                                        </li>
-                                        <li>
-                                            <i
-                                                class="fa-brands fa-pinterest"
-                                            ></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="name">TRẦN VĂN THẮNG</div>
-                                <div class="desc">
-                                    Với hơn 20 năm kinh nghiệm trong ngành sản
-                                    xuất nón bảo hiểm, tôi luôn đặt sự an toàn
-                                    của khách hàng lên hàng đầu.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
-                            <div class="box">
-                                <div class="img-1">
-                                    <img src="images/aboutUser2.png" alt="" />
-                                    <ul class="list">
-                                        <li>
-                                            <i
-                                                class="fa-brands fa-instagram"
-                                            ></i>
-                                        </li>
-                                        <li>
-                                            <i
-                                                class="fa-brands fa-pinterest"
-                                            ></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="name">NGUYỄN VĂN TÂN</div>
-                                <div class="desc">
-                                    Kĩ sư trưởng thiết kế và phát triển các dòng
-                                    nón bảo hiểm mới nhất của chúng tôi.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-five">
-                <div class="container">
-                    <div class="box">
-                        <h2 class="title thuongHieu_title_h2">
-                            THƯƠNG HIỆU THUỘC TẬP ĐOÀN
-                        </h2>
-
-                        <div class="container">
-                            <div class="wrap_thuongHieu">
-                                <div class="row">
-                                    <div
-                                        class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                                    >
-                                        <div class="thuongHieu">
-                                            <img
-                                                src="./images/th1.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                                    >
-                                        <div class="thuongHieu">
-                                            <img
-                                                src="./images/th2.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                                    >
-                                        <div class="thuongHieu">
-                                            <img
-                                                src="./images/th3.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                                    >
-                                        <div class="thuongHieu">
-                                            <img
-                                                src="./images/th4.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                                    >
-                                        <div class="thuongHieu">
-                                            <img
-                                                src="./images/th5.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-five">
-                <div class="container">
-                    <div class="box">
-                        <h2 class="title chungNhan_title_h2">CHỨNG NHẬN</h2>
-
-                        <div class="container">
-                            <div class="wrap_chungnhaan">
-                                <div class="row">
-                                    <div
-                                        class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                                    >
-                                        <div class="chungnhan">
-                                            <img
-                                                src="./images/cn4.jpg"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                                    >
-                                        <div class="chungnhan">
-                                            <img
-                                                src="./images/cn3.jpg"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                                    >
-                                        <div class="chungnhan">
-                                            <img
-                                                src="./images/cn2.jpg"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center"
-                                    >
-                                        <div class="chungnhan">
-                                            <img
-                                                src="./images/cn1.jpg"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- Your code goes here -->
-        <!-- Your code goes here -->
-        <footer
-            class="pb-6 text-center text-white footer pt-7 lg-text text-md-start"
-        >
+        </section>
+        <section class="section-five">
             <div class="container">
-                <div
-                    class="flex-wrap gap-5 mb-5 d-flex flex-column flex-md-row gap-md-0 justify-content-between align-items-center"
-                >
-                    <img
-                        src="./images/iconhelmet.png"
-                        alt=""
-                        style="width: 100px"
-                    />
-                    <div class="gap-2 location d-flex">
-                        <span
-                            ><i
-                                class="fa-regular fa-location-dot text-primary"
-                            ></i
-                        ></span>
-                        <p class="m-0 fw-bold">
-                            IUH NGUYỄN VĂN BẢO<br />
-                            số 12 Phường 1 Gò Vấp
-                        </p>
-                    </div>
-                    <div class="gap-2 open-time d-flex">
-                        <span
-                            ><i class="fa-regular fa-clock text-primary"></i
-                        ></span>
-                        <div>
-                            <p class="m-0 fw-bold">Mon to Sun:</p>
-                            <p class="m-0">8:00 AM To 6:00 PM</p>
+                <div class="box">
+                    <h2 class="title chungNhan_title_h2">CHỨNG NHẬN</h2>
+
+                    <div class="container">
+                        <div class="wrap_chungnhaan">
+                            <div class="row">
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                                    <div class="chungnhan">
+                                        <img src="./images/cn4.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                                    <div class="chungnhan">
+                                        <img src="./images/cn3.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                                    <div class="chungnhan">
+                                        <img src="./images/cn2.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xl-2 col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+                                    <div class="chungnhan">
+                                        <img src="./images/cn1.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="gap-2 location d-flex">
-                        <span
-                            ><i class="fa-regular fa-envelope text-primary"></i
-                        ></span>
-                        <div>
-                            <p class="m-0 fw-bold">Email Us:</p>
-                            <p class="m-0">16TYTH@GMAIL.COM</p>
-                        </div>
-                    </div>
-                    <p class="m-0 phone-number fw-bold text-primary fs-2">
-                        (090)-18007170
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Your code goes here -->
+    <!-- Your code goes here -->
+    <footer class="pb-6 text-center text-white footer pt-7 lg-text text-md-start">
+        <div class="container">
+            <div
+                class="flex-wrap gap-5 mb-5 d-flex flex-column flex-md-row gap-md-0 justify-content-between align-items-center">
+                <img src="./images/iconhelmet.png" alt="" style="width: 100px" />
+                <div class="gap-2 location d-flex">
+                    <span><i class="fa-regular fa-location-dot text-primary"></i></span>
+                    <p class="m-0 fw-bold">
+                        IUH NGUYỄN VĂN BẢO<br />
+                        số 12 Phường 1 Gò Vấp
                     </p>
                 </div>
-                <img
-                    class="mb-5"
-                    src="images/footer_divide.png"
-                    alt=""
-                    style="max-width: 100%"
-                />
-                <div class="row mb-7">
-                    <div class="col-md-3">
-                        <div class="mb-3">
-                            <h4 class="fw-bold">
-                                Tham gia cộng đồng và nhận ưu đãi đặc biệt!
-                            </h4>
-                        </div>
-                        <div class="mb-3">
-                            <p class="text-white-50">
-                                Với bộ sưu tập nón bảo hiểm đa dạng về kiểu
-                                dáng, mẫu mã và tính năng, chúng tôi tự tin mang
-                                đến cho bạn những sản phẩm chất lượng cao, đáp
-                                ứng mọi nhu cầu và phong cách. Hãy để chúng tôi
-                                giúp bạn chọn được chiếc nón bảo hiểm ưng ý
-                                nhất.
-                            </p>
-                        </div>
-                        <div>
-                            <a
-                                href="register.html"
-                                class="py-3 btn btn-light fw-bold text-uppercase"
-                            >
-                                THAM GIA
-                                <span
-                                    class="fa-stack super-sm-text ms-1"
-                                    style="margin-bottom: 2px"
-                                >
-                                    <i
-                                        class="fas fa-circle fa-stack-2x text-primary"
-                                    ></i>
-                                    <i
-                                        class="text-white fas fa-play fa-stack-1x"
-                                    ></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mt-5 col-md-9 mt-md-0">
-                        <div class="gap-5 row gap-md-0">
-                            <div class="offset-md-2 col-md-2">
-                                <div class="mb-4">
-                                    <p class="fw-bold text-uppercase xl-text">
-                                        SẢN PHẨM
-                                    </p>
-                                </div>
-                                <ul class="gap-2 list-unstyled vstack">
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >Nón BẢO HIỂM TRƠN</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM CÓ KÍNH</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM SƠN MÀI</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM HỌA TIẾT</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM 3/4</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="offset-md-2 col-md-2">
-                                <div class="mb-3">
-                                    <p class="fw-bold text-uppercase xl-text">
-                                        HỖ TRỢ KHÁCH HÀNG
-                                    </p>
-                                </div>
-                                <ul class="gap-2 list-unstyled vstack">
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >QUY ĐỊNH CHUNG</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >HƯỚNG DẪN TẠO TÀI KHOẢN</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >HƯỚNG DẪN MUA HÀNG</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >CHÍNH SÁCH ĐỔI SẢN PHẨM</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="offset-md-2 col-md-2">
-                                <div class="mb-3">
-                                    <p class="fw-bold text-uppercase xl-text">
-                                        THÔNG TIN LIÊN HỆ
-                                    </p>
-                                </div>
-                                <ul class="gap-2 list-unstyled vstack">
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >HOTLINE MUA HÀNG: 18007179</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >HOTLINE CSKH: 18007078</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >EMAIL: 16TYTH@GMAIL.COM</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >WEBSITE: NONSON.VN</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            class="text-white-50 text-decoration-none"
-                                            >ĐỊA CHỈ: IUH TPHCM</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                <div class="gap-2 open-time d-flex">
+                    <span><i class="fa-regular fa-clock text-primary"></i></span>
+                    <div>
+                        <p class="m-0 fw-bold">Mon to Sun:</p>
+                        <p class="m-0">8:00 AM To 6:00 PM</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 d-flex flex-column flex-md-row">
-                        <div class="wrap_content_footer">
-                            <p class="text-white-50">
-                                Copyright &copy; 2025
-                                <span class="text-white">SHOPTEAM12</span>
-                            </p>
-
-                            <p><b>THIẾT KẾ WEBSITE: </b>Nhóm 12</p>
+                <div class="gap-2 location d-flex">
+                    <span><i class="fa-regular fa-envelope text-primary"></i></span>
+                    <div>
+                        <p class="m-0 fw-bold">Email Us:</p>
+                        <p class="m-0">16TYTH@GMAIL.COM</p>
+                    </div>
+                </div>
+                <p class="m-0 phone-number fw-bold text-primary fs-2">
+                    (090)-18007170
+                </p>
+            </div>
+            <img class="mb-5" src="images/footer_divide.png" alt="" style="max-width: 100%" />
+            <div class="row mb-7">
+                <div class="col-md-3">
+                    <div class="mb-3">
+                        <h4 class="fw-bold">
+                            Tham gia cộng đồng và nhận ưu đãi đặc biệt!
+                        </h4>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-white-50">
+                            Với bộ sưu tập nón bảo hiểm đa dạng về kiểu
+                            dáng, mẫu mã và tính năng, chúng tôi tự tin mang
+                            đến cho bạn những sản phẩm chất lượng cao, đáp
+                            ứng mọi nhu cầu và phong cách. Hãy để chúng tôi
+                            giúp bạn chọn được chiếc nón bảo hiểm ưng ý
+                            nhất.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="register.html" class="py-3 btn btn-light fw-bold text-uppercase">
+                            THAM GIA
+                            <span class="fa-stack super-sm-text ms-1" style="margin-bottom: 2px">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="text-white fas fa-play fa-stack-1x"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-5 col-md-9 mt-md-0">
+                    <div class="gap-5 row gap-md-0">
+                        <div class="offset-md-2 col-md-2">
+                            <div class="mb-4">
+                                <p class="fw-bold text-uppercase xl-text">
+                                    SẢN PHẨM
+                                </p>
+                            </div>
+                            <ul class="gap-2 list-unstyled vstack">
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">Nón BẢO HIỂM TRƠN</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">NÓN BẢO HIỂM CÓ KÍNH</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">NÓN BẢO HIỂM SƠN MÀI</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">NÓN BẢO HIỂM HỌA TIẾT</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">NÓN BẢO HIỂM 3/4</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="ms-md-auto">
-                            <a href="#" class="text-decoration-none">
-                                <span class="fa-stack">
-                                    <i
-                                        class="fas fa-circle fa-stack-2x text-primary"
-                                    ></i>
-                                    <i
-                                        class="text-white fab fa-facebook-f fa-stack-1x"
-                                    ></i>
-                                </span>
-                            </a>
-                            <a href="#" class="text-decoration-none">
-                                <span class="fa-stack">
-                                    <i
-                                        class="fas fa-circle fa-stack-2x text-primary"
-                                    ></i>
-                                    <i
-                                        class="text-white fab fa-twitter fa-stack-1x"
-                                    ></i>
-                                </span>
-                            </a>
-                            <a href="#" class="text-decoration-none">
-                                <span class="fa-stack">
-                                    <i
-                                        class="fas fa-circle fa-stack-2x text-primary"
-                                    ></i>
-                                    <i
-                                        class="text-white fab fa-instagram fa-stack-1x"
-                                    ></i>
-                                </span>
-                            </a>
-                            <a href="#" class="text-decoration-none">
-                                <span class="fa-stack">
-                                    <i
-                                        class="fas fa-circle fa-stack-2x text-primary"
-                                    ></i>
-                                    <i
-                                        class="text-white fab fa-pinterest fa-stack-1x"
-                                    ></i>
-                                </span>
-                            </a>
+                        <div class="offset-md-2 col-md-2">
+                            <div class="mb-3">
+                                <p class="fw-bold text-uppercase xl-text">
+                                    HỖ TRỢ KHÁCH HÀNG
+                                </p>
+                            </div>
+                            <ul class="gap-2 list-unstyled vstack">
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">QUY ĐỊNH CHUNG</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">HƯỚNG DẪN TẠO TÀI KHOẢN</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">HƯỚNG DẪN MUA HÀNG</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">CHÍNH SÁCH ĐỔI SẢN PHẨM</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="offset-md-2 col-md-2">
+                            <div class="mb-3">
+                                <p class="fw-bold text-uppercase xl-text">
+                                    THÔNG TIN LIÊN HỆ
+                                </p>
+                            </div>
+                            <ul class="gap-2 list-unstyled vstack">
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">HOTLINE MUA HÀNG:
+                                        18007179</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">HOTLINE CSKH: 18007078</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">EMAIL: 16TYTH@GMAIL.COM</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">WEBSITE: NONSON.VN</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-white-50 text-decoration-none">ĐỊA CHỈ: IUH TPHCM</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+            <div class="row">
+                <div class="col-12 d-flex flex-column flex-md-row">
+                    <div class="wrap_content_footer">
+                        <p class="text-white-50">
+                            Copyright &copy; 2025
+                            <span class="text-white">SHOPTEAM12</span>
+                        </p>
 
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/flash-message.js"></script>
-        <script src="js/data-products.js"></script>
-        <script src="js/shopping-cart.js"></script>
-        <script src="js/show-acccount.js"></script>
-    </body>
+                        <p><b>THIẾT KẾ WEBSITE: </b>Nhóm 12</p>
+                    </div>
+                    <div class="ms-md-auto">
+                        <a href="#" class="text-decoration-none">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="text-white fab fa-facebook-f fa-stack-1x"></i>
+                            </span>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="text-white fab fa-twitter fa-stack-1x"></i>
+                            </span>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="text-white fab fa-instagram fa-stack-1x"></i>
+                            </span>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="text-white fab fa-pinterest fa-stack-1x"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/flash-message.js"></script>
+    <script src="js/data-products.js"></script>
+    <script src="js/shopping-cart.js"></script>
+    <script src="js/show-acccount.js"></script>
+</body>
+
 </html>
