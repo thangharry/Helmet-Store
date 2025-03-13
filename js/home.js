@@ -31,7 +31,9 @@ const featuredProductsHTML = featuredProducts.map(product => `
                         <p class="text-center">${product.name}</p>
                     </div>
                     <div class="d-flex gap-1 align-items-center justify-content-center">
-                        <p class="fw-bold text-black">$${product.price}</p>
+                        
+                        <p class="fw-bold text-black">${product.price.toLocaleString("vi-VN")} VNĐ</p>
+
                     </div>
                 </div>
             </div>

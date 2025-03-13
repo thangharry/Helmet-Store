@@ -132,8 +132,9 @@ function renderCart() {
                             ${item.name}
                         </a>
                         <div class="product__group-prices">
-                            <p class="w-100 m-0 ${discount ? " real__price" : "normal__price"}">$${item.price.toFixed(2)}</p>
-                            <p class="w-100 m-0 sale__price ${discount ? "" : " d-none"}">$${((item.price * (100 - item.discount)) / 100).toFixed(2)}</p>
+                            <p class="w-100 m-0 ${discount ? " real__price" : "normal__price"}">${item.price.toLocaleString("vi-VN")} VNĐ</p>
+                            <p class="w-100 m-0 sale__price ${discount ? "" : " d-none"}">${((item.price * (100 - item.discount)) / 100).toLocaleString("vi-VN")} VNĐ</p>
+
                         </div>
                         <div class="lg-text">Quantity: ${storageQtyCartValue[storageCartValue.indexOf(item.code)]}</div>
                     </div>
