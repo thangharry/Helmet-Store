@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- fasdasd123 -->
+  <!-- fasdasd123 -->
 
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Helmet Store</title>
@@ -19,103 +19,142 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<!-- test git -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <!-- test git -->
 
-<body>
+  <body>
     <!-- git -->
     <!-- git111111 -->
-    <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100" style="font-size: 14px">
-        <!-- test git hu -->
-        <div class="container-fluid">
-            <!-- the hamburger -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar-on-mobile">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark position-absolute w-100"
+      style="font-size: 14px"
+    >
+      <!-- test git hu -->
+      <div class="container-fluid">
+        <!-- the hamburger -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#navbar-on-mobile"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- the brand -->
-            <a class="navbar-brand mx-auto" href="home.html">
-                <img src="images/iconhelmet.png" style="width: 75px" />
-            </a>
+        <!-- the brand -->
+        <a class="navbar-brand mx-auto" href="home.html">
+          <img src="images/iconhelmet.png" style="width: 75px" />
+        </a>
 
-            <!-- the cart on small screen => mobile -->
-            <li class="ms-auto d-inline-block d-lg-none cart-show">
-                <a class="nav-link-mobile p-0" data-bs-toggle="offcanvas" data-bs-target="#shoppingCartOffcanvas">
-                    <span><i class="fa-solid fa-cart-shopping text-primary"></i></span>
-                </a>
+        <!-- the cart on small screen => mobile -->
+        <li class="ms-auto d-inline-block d-lg-none cart-show">
+          <a
+            class="nav-link-mobile p-0"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#shoppingCartOffcanvas"
+          >
+            <span><i class="fa-solid fa-cart-shopping text-primary"></i></span>
+          </a>
+        </li>
+
+        <!-- the nav bar on large screen => desktop -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav navbar-nav-1 ms-lg-6 mb-lg-0 fw-bold">
+            <li class="nav-item">
+              <a
+                class="nav-link active nav-link-hover"
+                aria-current="page"
+                href="home.html"
+              >
+                <span class="nav-link-hover">Trang Chủ</span>
+              </a>
             </li>
-
-            <!-- the nav bar on large screen => desktop -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav navbar-nav-1 ms-lg-6 mb-lg-0 fw-bold">
-                    <li class="nav-item">
-                        <a class="nav-link active nav-link-hover" aria-current="page" href="home.html">
-                            <span class="nav-link-hover">Trang Chủ</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-hover" href="shop.html">
-                            <span class="nav-link-hover">Cửa Hàng</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-hover" href="about.html">
-                            <span class="nav-link-hover">Về Chúng Tôi</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-hover" href="contact.html">
-                            <span class="nav-link-hover">Liên Hệ</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav navbar-nav-2 ms-auto mb-2 mb-lg-0 fw-bold d-flex">
-                    <li class="nav-item">
-                        <a class="nav-link p-0" href="store-locator.html">
-                            <span class="me-2"><i class="fa-solid fa-location-dot text-primary"></i></span>
-                            Địa Chỉ
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown dropstart account">
-                        <span class="me-2"><i class="fa-solid fa-location-dot text-primary"></i></span>
-                        Đăng nhập
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link p-0" href="#" data-bs-toggle="offcanvas"
-                            data-bs-target="#shoppingCartOffcanvas">
-                            <span class="me-2"><i class="fa-solid fa-cart-shopping text-primary"></i></span>
-                            Giỏ hàng
-                            <span class="fa-stack ms-1" style="font-size: 10px">
-                                <i class="fas fa-circle text-primary fa-stack-2x"></i>
-                                <p class="fa-stack-1x text-black cart-count">
-                                    0
-                                </p>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <li class="nav-item">
+              <a class="nav-link nav-link-hover" href="shop.html">
+                <span class="nav-link-hover">Cửa Hàng</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-hover" href="about.html">
+                <span class="nav-link-hover">Về Chúng Tôi</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-hover" href="contact.html">
+                <span class="nav-link-hover">Liên Hệ</span>
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="navbar-nav navbar-nav-2 ms-auto mb-2 mb-lg-0 fw-bold d-flex"
+          >
+            <li class="nav-item">
+              <a class="nav-link p-0" href="store-locator.html">
+                <span class="me-2"
+                  ><i class="fa-solid fa-location-dot text-primary"></i
+                ></span>
+                Địa Chỉ
+              </a>
+            </li>
+            <li class="nav-item dropdown dropstart account">
+              <span class="me-2"
+                ><i class="fa-solid fa-location-dot text-primary"></i
+              ></span>
+              Đăng nhập
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link p-0"
+                href="#"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#shoppingCartOffcanvas"
+              >
+                <span class="me-2"
+                  ><i class="fa-solid fa-cart-shopping text-primary"></i
+                ></span>
+                Giỏ hàng
+                <span class="fa-stack ms-1" style="font-size: 10px">
+                  <i class="fas fa-circle text-primary fa-stack-2x"></i>
+                  <p class="fa-stack-1x text-black cart-count">0</p>
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- the shopping cart offcanvas -->
-    <div class="offcanvas offcanvas-end text-black" tabindex="-1" id="shoppingCartOffcanvas"
-        aria-labelledby="offcanvasLabel">
-        <div class="offcanvas-header border-bottom py-4">
-            <h5 class="offcanvas-title" id="offcanvasLabel">Giỏ Hàng</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
+    <div
+      class="offcanvas offcanvas-end text-black"
+      tabindex="-1"
+      id="shoppingCartOffcanvas"
+      aria-labelledby="offcanvasLabel"
+    >
+      <div class="offcanvas-header border-bottom py-4">
+        <h5 class="offcanvas-title" id="offcanvasLabel">Giỏ Hàng</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
 
-        <div class="offcanvas-body">
-            <p class="text-black-50 text-center xxl-text cart-show-body">
-                Hiện chưa có sản phẩm nào trong giỏ hàng
-            </p>
-        </div>
+      <div class="offcanvas-body">
+        <p class="text-black-50 text-center xxl-text cart-show-body">
+          Hiện chưa có sản phẩm nào trong giỏ hàng
+        </p>
+      </div>
 
-        <!-- <div class="offcanvas-body">
+      <!-- <div class="offcanvas-body">
                 <p class="text-black-50 text-center xxl-text cart-show-body">
                     No products in the cart
                 </p>
@@ -123,575 +162,748 @@
     </div>
 
     <!-- the nav bar canvas on small screen => mobile  -->
-    <div class="offcanvas offcanvas-start text-bg-light" tabindex="-1" id="navbar-on-mobile" style="z-index: 1055">
-        <div class="offcanvas-header px-4 pt-4">
-            <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">
-                main menu
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav-mobile fw-bold list-group list-group-flush">
-                <li class="navbar-item-mobile list-group-item p-0 py-2 mx-3">
-                    <a class="navbar-link-mobile text-decoration-none active" href="#">Trang Chủ</a>
-                </li>
-                <li class="navbar-item-mobile list-group-item p-0 py-2 mx-3">
-                    <a class="navbar-link-mobile text-decoration-none" href="#">Cửa Hàng</a>
-                </li>
-                <li class="navbar-item-mobile list-group-item p-0 py-2 mx-3">
-                    <a class="navbar-link-mobile text-decoration-none" href="#">Về Chúng Tôi</a>
-                </li>
-                <li class="navbar-item-mobile list-group-item p-0 py-2 mx-3">
-                    <a class="navbar-link-mobile text-decoration-none" href="#">Liên Hệ</a>
-                </li>
-                <li class="navbar-item-mobile list-group-item p-0 py-2 mx-3">
-                    <a class="navbar-link-mobile text-decoration-none p-0" href="#">
-                        <span class="me-2"><i class="fa-solid fa-location-dot text-primary"></i></span>
-                        Địa Chỉ
-                    </a>
-                </li>
-                <li class="navbar-item-mobile list-group-item p-0 py-2 mx-3 dropdown dropstart">
-                    <a class="navbar-link-mobile text-decoration-none p-0" data-bs-toggle="modal"
-                        data-bs-target="#signInModal" href="#">
-                        <span class="me-2"><i class="fa-solid fa-user text-primary"></i></span>
-                        Đăng Nhập
-                    </a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="signInModal" data-bs-backdrop="static" data-bs-keyboard="false"
-                        style="z-index: 1800">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header border-bottom-0">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body p-0">
-                                    <div class="sign-in px-4 pt-3 pb-3 bg-light text-black w-100">
-                                        <div class="d-flex justify-content-between">
-                                            <h3>Đăng nhập</h3>
-                                            <a href="#" class="text-primary">Tạo tài khoản</a>
-                                        </div>
-                                        <form class="mb-3">
-                                            <div class="mb-3">
-                                                <label for="username" class="form-label">Tên tài khoản hoặc
-                                                    email<span class="text-danger">*</span></label>
-                                                <input class="form-control text-black" type="text" id="username"
-                                                    placeholder="Username" />
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="password" class="form-label">Mật khẩu
-                                                    <span class="text-danger">*</span></label>
-                                                <input class="form-control text-black" type="text" id="password"
-                                                    placeholder="Password" />
-                                            </div>
-                                            <div class="d-grid">
-                                                <button class="btn btn-primary fw-bold text-uppercase">
-                                                    Đăng nhập
-                                                    <span class="fa-stack sm-text ms-1" style="
-                                                                margin-bottom: 1px;
-                                                            ">
-                                                        <i class="fas fa-circle fa-stack-2x text-black"></i>
-                                                        <i class="fas fa-play fa-stack-1x text-primary"></i>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </form>
-                                        <div class="text-end">
-                                            <p class="text-primary">
-                                                Quên mật khẩu?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <div
+      class="offcanvas offcanvas-start text-bg-light"
+      tabindex="-1"
+      id="navbar-on-mobile"
+      style="z-index: 1055"
+    >
+      <div class="offcanvas-header px-4 pt-4">
+        <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">main menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav-mobile fw-bold list-group list-group-flush">
+          <li class="navbar-item-mobile list-group-item p-0 py-2 mx-3">
+            <a class="navbar-link-mobile text-decoration-none active" href="#"
+              >Trang Chủ</a
+            >
+          </li>
+          <li class="navbar-item-mobile list-group-item p-0 py-2 mx-3">
+            <a class="navbar-link-mobile text-decoration-none" href="#"
+              >Cửa Hàng</a
+            >
+          </li>
+          <li class="navbar-item-mobile list-group-item p-0 py-2 mx-3">
+            <a class="navbar-link-mobile text-decoration-none" href="#"
+              >Về Chúng Tôi</a
+            >
+          </li>
+          <li class="navbar-item-mobile list-group-item p-0 py-2 mx-3">
+            <a class="navbar-link-mobile text-decoration-none" href="#"
+              >Liên Hệ</a
+            >
+          </li>
+          <li class="navbar-item-mobile list-group-item p-0 py-2 mx-3">
+            <a class="navbar-link-mobile text-decoration-none p-0" href="#">
+              <span class="me-2"
+                ><i class="fa-solid fa-location-dot text-primary"></i
+              ></span>
+              Địa Chỉ
+            </a>
+          </li>
+          <li
+            class="navbar-item-mobile list-group-item p-0 py-2 mx-3 dropdown dropstart"
+          >
+            <a
+              class="navbar-link-mobile text-decoration-none p-0"
+              data-bs-toggle="modal"
+              data-bs-target="#signInModal"
+              href="#"
+            >
+              <span class="me-2"
+                ><i class="fa-solid fa-user text-primary"></i
+              ></span>
+              Đăng Nhập
+            </a>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="signInModal"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              style="z-index: 1800"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header border-bottom-0">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body p-0">
+                    <div
+                      class="sign-in px-4 pt-3 pb-3 bg-light text-black w-100"
+                    >
+                      <div class="d-flex justify-content-between">
+                        <h3>Đăng nhập</h3>
+                        <a href="#" class="text-primary">Tạo tài khoản</a>
+                      </div>
+                      <form class="mb-3">
+                        <div class="mb-3">
+                          <label for="username" class="form-label"
+                            >Tên tài khoản hoặc email<span class="text-danger"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            class="form-control text-black"
+                            type="text"
+                            id="username"
+                            placeholder="Username"
+                          />
                         </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label"
+                            >Mật khẩu <span class="text-danger">*</span></label
+                          >
+                          <input
+                            class="form-control text-black"
+                            type="text"
+                            id="password"
+                            placeholder="Password"
+                          />
+                        </div>
+                        <div class="d-grid">
+                          <button
+                            class="btn btn-primary fw-bold text-uppercase"
+                          >
+                            Đăng nhập
+                            <span
+                              class="fa-stack sm-text ms-1"
+                              style="margin-bottom: 1px"
+                            >
+                              <i
+                                class="fas fa-circle fa-stack-2x text-black"
+                              ></i>
+                              <i
+                                class="fas fa-play fa-stack-1x text-primary"
+                              ></i>
+                            </span>
+                          </button>
+                        </div>
+                      </form>
+                      <div class="text-end">
+                        <p class="text-primary">Quên mật khẩu?</p>
+                      </div>
                     </div>
-                </li>
-            </ul>
-        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <main>
-        <header class="header pt-8 pb-7 text-white">
-            <div id="imgHeading" class="carousel slide" data-bs-ride="carousel">
+      <header class="header pt-8 pb-7 text-white">
+        <div id="imgHeading" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#imgHeading"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#imgHeading"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#imgHeading"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./images/img_thumb1.jpg"
+                class="d-block w-100"
+                alt="img_thumbnail"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/img_thumb2.jpg"
+                class="d-block w-100"
+                alt="img_thumbnail"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/img_thumb4.jpg"
+                class="d-block w-100"
+                alt="img_thumbnail"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#imgHeading"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#imgHeading"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </header>
+      <section class="products py-1 text-black">
+        <div class="container">
+          <div class="row mb-4">
+            <div class="offset-md-3 col-md-6">
+              <div class="text-container text-center">
+                <div class="mb-4">
+                  <h2 class="fw-bold display-5">SẢN PHẨM NỔI BẬT</h2>
+                </div>
+                <div class="mb-4">
+                  <img src="images/line-break.png" alt="" style="width: 60px" />
+                </div>
+                <div class="mb-4">
+                  <p class="text-black-50">
+                    Bạn có thể đặt mua nhiều kiểu dáng khác nhau. Phù hợp để
+                    trải nghiệm và mang đến sự lựa chọn đa dạng cho bạn, dành
+                    cho mọi phong cách.!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row product-container"></div>
+        </div>
+      </section>
+      <section class="ytb-video">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="ytb-video-body bg-black py-10 position-relative">
+              <div class="play-button-container d-flex justify-content-center">
+                <video
+                  width="90%"
+                  height="600px"
+                  poster="./images/thumbVideo.jpg"
+                ></video>
+                <a
+                  class="video-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#ytb-video"
+                  data-bs-src="https://www.youtube.com/watch?v=ObrLbpXRHhI"
+                >
+                  <span class="video-play-button">
+                    <span></span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="ytb-video"
+          tabindex="-1"
+          aria-labelledby="youtubeVideoLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body p-0" style="height: 640px">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/ObrLbpXRHhI"
+                  title="Open Farm Unique Pet Food Commercial"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="experts py-5 py-md-7 text-black text-center text-md-end">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 position-relative">
+              <div class="mb-3">
+                <h3 class="fw-bold display-7">
+                  Gặp gỡ những người đã trải nghiệm nón bảo hiểm của chúng tôi
+                </h3>
+              </div>
+              <div class="mb-3">
+                <img src="images/line-break.png" alt="" style="width: 60px" />
+              </div>
+              <div class="mb-4">
+                <p class="text-black-50">
+                  Hãy trở thành một phần của cộng đồng những người tin dùng nón
+                  bảo hiểm của chúng tôi.
+                </p>
+              </div>
+              <div>
+                <button class="btn btn-primary text-uppercase fw-bold">
+                  Khám Phá Ngay
+                  <span
+                    class="fa-stack sm-text ms-1"
+                    style="margin-bottom: 2px"
+                  >
+                    <i class="fas fa-circle fa-stack-2x text-black"></i>
+                    <i class="fas fa-play fa-stack-1x text-primary"></i>
+                  </span>
+                </button>
+              </div>
+              <img
+                class="d-none d-md-block position-absolute arrow-decor"
+                src="images/arrow-decor.png"
+                alt=""
+                style="width: 200px"
+              />
+            </div>
+            <div class="offset-md-3 col-md-2 mt-4 mt-md-0">
+              <div class="text-center">
+                <div class="img-container mb-4">
+                  <img src="./images/homeAva1.jpg" alt="" class="img-fluid" />
+                </div>
+                <div class="mb-2">
+                  <h5 class="fw-bold">Trần Thị Lan Anh</h5>
+                </div>
+                <p class="fw-semibold text-black-50">
+                  Một trong những khách hàng hàng đầu của chúng tôi
+                </p>
+              </div>
+            </div>
+            <div class="offset-md-1 col-md-2 mt-4 mt-md-0">
+              <div class="text-center">
+                <div class="img-container mb-4">
+                  <img src="./images/homeAva2.jpg" alt="" class="img-fluid" />
+                </div>
+                <div class="mb-2">
+                  <h5 class="fw-bold">Trần Tiến Tài</h5>
+                </div>
+                <p class="fw-semibold text-black-50">
+                  Khách hàng trung thành của chúng tôi
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials text-black py-7">
+        <div class="container">
+          <div class="row">
+            <div class="offset-md-4 col-md-4 mb-4">
+              <div class="text-center">
+                <div class="mb-3">
+                  <h3 class="fw-bold display-6">
+                    Khách hàng của chúng tôi yêu thích sự an toàn và phong cách!
+                  </h3>
+                </div>
+                <div class="mb-3">
+                  <img src="images/line-break.png" alt="" style="width: 60px" />
+                </div>
+                <div>
+                  <p class="text-black-50 lg-text">
+                    Đánh giá từ khách hàng - Sự an toàn và chất lượng được khẳng
+                    định
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row position-relative">
+            <img
+              class="position-absolute quote-img"
+              src="images/quote.png"
+              alt=""
+            />
+            <div class="offset-md-4 col-md-4">
+              <div
+                id="testimonial-carousel"
+                class="carousel slide"
+                style="min-height: 450px"
+              >
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#imgHeading" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#imgHeading" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#imgHeading" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                  <button
+                    class="active"
+                    type="button"
+                    data-bs-target="#testimonial-carousel"
+                    data-bs-slide-to="0"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    class=""
+                    type="button"
+                    data-bs-target="#testimonial-carousel"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    class=""
+                    type="button"
+                    data-bs-target="#testimonial-carousel"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./images/img_thumb1.jpg" class="d-block w-100" alt="img_thumbnail" />
+                  <div class="carousel-item active">
+                    <div class="text-center">
+                      <div class="img-container mb-4">
+                        <img
+                          class="rounded-circle"
+                          src="./images/homeComen1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="row mb-4">
+                        <div class="offset-md-1 col-md-10">
+                          <p class="fst-italic fw-bold">
+                            Chiếc Nón Sơn có thiết kế tinh tế, chất liệu cao cấp
+                            và độ bền ấn tượng. Đội rất thoải mái, giúp bảo vệ
+                            tốt dưới nắng. Đây là lựa chọn hoàn hảo cho phong
+                            cách và chất lượng.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="fw-bold mb-2">Đào Thế Vinh</p>
+                        <p class="text-black-50">Khách hàng thân thiết</p>
+                      </div>
                     </div>
-
-                    <div class="carousel-item">
-                        <img src="./images/img_thumb2.jpg" class="d-block w-100" alt="img_thumbnail" />
+                  </div>
+                  <div class="carousel-item">
+                    <div class="text-center">
+                      <div class="img-container mb-4">
+                        <img
+                          class="rounded-circle"
+                          src="./images/homeComen2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="row mb-4">
+                        <div class="offset-md-1 col-md-10">
+                          <p class="fst-italic fw-bold">
+                            Chiếc Nón Sơn tích hợp kính chắn gió giúp bảo vệ tối
+                            đa, che chắn hiệu quả trước bụi, gió và mưa. Thiết
+                            kế sang trọng, chất liệu bền đẹp, kính trong suốt dễ
+                            quan sát, mang lại sự an toàn và thoải mái khi sử
+                            dụng.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="fw-bold mb-2">Nguyễn Thị Hồng</p>
+                        <p class="text-black-50">Khách hàng lâu năm</p>
+                      </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="./images/img_thumb4.jpg" class="d-block w-100" alt="img_thumbnail" />
+                  </div>
+                  <div class="carousel-item">
+                    <div class="text-center">
+                      <div class="img-container mb-4">
+                        <img
+                          class="rounded-circle"
+                          src="./images/homeComen3.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="row mb-4">
+                        <div class="offset-md-1 col-md-10">
+                          <p class="fst-italic fw-bold">
+                            Một chiếc nón với họa tiết đáng yêu dành cho các bé,
+                            được thiết kế với màu sắc tươi sáng, Ưhình ảnh ngộ
+                            nghĩnh và chất liệu mềm mại, giúp bé đội thoải mái
+                            và thêm phần thích thú.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="fw-bold mb-2">Nguyễn Văn An</p>
+                        <p class="text-black-50">Khách hàng mới</p>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#imgHeading" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#imgHeading" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
+              </div>
             </div>
-        </header>
-        <section class="products py-1 text-black">
-            <div class="container">
-                <div class="row mb-4">
-                    <div class="offset-md-3 col-md-6">
-                        <div class="text-container text-center">
-                            <div class="mb-4">
-                                <h2 class="fw-bold display-5">
-                                    SẢN PHẨM NỔI BẬT
-                                </h2>
-                            </div>
-                            <div class="mb-4">
-                                <img src="images/line-break.png" alt="" style="width: 60px" />
-                            </div>
-                            <div class="mb-4">
-                                <p class="text-black-50">
-                                    Bạn có thể đặt mua nhiều kiểu dáng khác
-                                    nhau. Phù hợp để trải nghiệm và mang đến
-                                    sự lựa chọn đa dạng cho bạn, dành cho
-                                    mọi phong cách.!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe pb-8">
+        <div
+          class="container bg-success py-7 rounded-4 rounded-md-4 position-relative subscribe-body"
+        >
+          <img
+            class="position-absolute w-100 subscribe-img opacity-50"
+            src="./images/img_thumb2.png"
+            alt=""
+          />
+          <div class="row position-relative" style="z-index: 1">
+            <div class="offset-md-3 col-md-6">
+              <div class="h-100 d-flex flex-column justify-content-center">
+                <div class="mb-3">
+                  <h3 class="display-4 fw-bold text-center text-white">
+                    Nhận thông tin khuyến mãi và an toàn mới nhất
+                  </h3>
                 </div>
-                <div class="row product-container"></div>
+                <form class="button-group d-flex gap-2">
+                  <input
+                    type="email"
+                    class="form-control rounded-5 text-black"
+                    placeholder="Enter your email..."
+                    required
+                  />
+                  <button
+                    class="btn btn-primary fw-bold text-uppercase d-flex align-items-center"
+                  >
+                    Subscribe
+                    <span
+                      class="fa-stack sm-text ms-1"
+                      style="margin-bottom: 1px"
+                    >
+                      <i class="fas fa-circle fa-stack-2x text-black"></i>
+                      <i class="fas fa-play fa-stack-1x text-primary"></i>
+                    </span>
+                  </button>
+                </form>
+              </div>
             </div>
-        </section>
-        <section class="ytb-video">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="ytb-video-body bg-black py-10 position-relative">
-                        <div class="play-button-container d-flex justify-content-center">
-                            <video width="90%" height="600px" poster="./images/thumbVideo.jpg"></video>
-                            <a class="video-btn" data-bs-toggle="modal" data-bs-target="#ytb-video"
-                                data-bs-src="https://www.youtube.com/watch?v=ObrLbpXRHhI">
-                                <span class="video-play-button">
-                                    <span></span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="ytb-video" tabindex="-1" aria-labelledby="youtubeVideoLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body p-0" style="height: 640px">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ObrLbpXRHhI"
-                                title="Open Farm Unique Pet Food Commercial" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="experts py-5 py-md-7 text-black text-center text-md-end">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 position-relative">
-                        <div class="mb-3">
-                            <h3 class="fw-bold display-7">
-                                Gặp gỡ những người đã trải nghiệm nón bảo
-                                hiểm của chúng tôi
-                            </h3>
-                        </div>
-                        <div class="mb-3">
-                            <img src="images/line-break.png" alt="" style="width: 60px" />
-                        </div>
-                        <div class="mb-4">
-                            <p class="text-black-50">
-                                Hãy trở thành một phần của cộng đồng những
-                                người tin dùng nón bảo hiểm của chúng tôi.
-                            </p>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary text-uppercase fw-bold">
-                                Khám Phá Ngay
-                                <span class="fa-stack sm-text ms-1" style="margin-bottom: 2px">
-                                    <i class="fas fa-circle fa-stack-2x text-black"></i>
-                                    <i class="fas fa-play fa-stack-1x text-primary"></i>
-                                </span>
-                            </button>
-                        </div>
-                        <img class="d-none d-md-block position-absolute arrow-decor" src="images/arrow-decor.png" alt=""
-                            style="width: 200px" />
-                    </div>
-                    <div class="offset-md-3 col-md-2 mt-4 mt-md-0">
-                        <div class="text-center">
-                            <div class="img-container mb-4">
-                                <img src="./images/homeAva1.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="mb-2">
-                                <h5 class="fw-bold">Trần Thị Lan Anh</h5>
-                            </div>
-                            <p class="fw-semibold text-black-50">
-                                Một trong những khách hàng hàng đầu của
-                                chúng tôi
-                            </p>
-                        </div>
-                    </div>
-                    <div class="offset-md-1 col-md-2 mt-4 mt-md-0">
-                        <div class="text-center">
-                            <div class="img-container mb-4">
-                                <img src="./images/homeAva2.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="mb-2">
-                                <h5 class="fw-bold">Trần Tiến Tài</h5>
-                            </div>
-                            <p class="fw-semibold text-black-50">
-                                Khách hàng trung thành của chúng tôi
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="testimonials text-black py-7">
-            <div class="container">
-                <div class="row">
-                    <div class="offset-md-4 col-md-4 mb-4">
-                        <div class="text-center">
-                            <div class="mb-3">
-                                <h3 class="fw-bold display-6">
-                                    Khách hàng của chúng tôi yêu thích sự an
-                                    toàn và phong cách!
-                                </h3>
-                            </div>
-                            <div class="mb-3">
-                                <img src="images/line-break.png" alt="" style="width: 60px" />
-                            </div>
-                            <div>
-                                <p class="text-black-50 lg-text">
-                                    Đánh giá từ khách hàng - Sự an toàn và
-                                    chất lượng được khẳng định
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row position-relative">
-                    <img class="position-absolute quote-img" src="images/quote.png" alt="" />
-                    <div class="offset-md-4 col-md-4">
-                        <div id="testimonial-carousel" class="carousel slide" style="min-height: 450px">
-                            <div class="carousel-indicators">
-                                <button class="active" type="button" data-bs-target="#testimonial-carousel"
-                                    data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
-                                <button class="" type="button" data-bs-target="#testimonial-carousel"
-                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button class="" type="button" data-bs-target="#testimonial-carousel"
-                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="text-center">
-                                        <div class="img-container mb-4">
-                                            <img class="rounded-circle" src="./images/homeComen1.png" alt="" />
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="offset-md-1 col-md-10">
-                                                <p class="fst-italic fw-bold">
-                                                    Chiếc Nón Sơn có thiết
-                                                    kế tinh tế, chất liệu
-                                                    cao cấp và độ bền ấn
-                                                    tượng. Đội rất thoải
-                                                    mái, giúp bảo vệ tốt
-                                                    dưới nắng. Đây là lựa
-                                                    chọn hoàn hảo cho phong
-                                                    cách và chất lượng.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="text-center">
-                                            <p class="fw-bold mb-2">
-                                                Đào Thế Vinh
-                                            </p>
-                                            <p class="text-black-50">
-                                                Khách hàng thân thiết
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="text-center">
-                                        <div class="img-container mb-4">
-                                            <img class="rounded-circle" src="./images/homeComen2.png" alt="" />
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="offset-md-1 col-md-10">
-                                                <p class="fst-italic fw-bold">
-                                                    Chiếc Nón Sơn tích hợp
-                                                    kính chắn gió giúp bảo
-                                                    vệ tối đa, che chắn hiệu
-                                                    quả trước bụi, gió và
-                                                    mưa. Thiết kế sang
-                                                    trọng, chất liệu bền
-                                                    đẹp, kính trong suốt dễ
-                                                    quan sát, mang lại sự an
-                                                    toàn và thoải mái khi sử
-                                                    dụng.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="text-center">
-                                            <p class="fw-bold mb-2">
-                                                Nguyễn Thị Hồng
-                                            </p>
-                                            <p class="text-black-50">
-                                                Khách hàng lâu năm
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="text-center">
-                                        <div class="img-container mb-4">
-                                            <img class="rounded-circle" src="./images/homeComen3.png" alt="" />
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="offset-md-1 col-md-10">
-                                                <p class="fst-italic fw-bold">
-                                                    Một chiếc nón với họa
-                                                    tiết đáng yêu dành cho
-                                                    các bé, được thiết kế
-                                                    với màu sắc tươi sáng,
-                                                    Ưhình ảnh ngộ nghĩnh và
-                                                    chất liệu mềm mại, giúp
-                                                    bé đội thoải mái và thêm
-                                                    phần thích thú.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="text-center">
-                                            <p class="fw-bold mb-2">
-                                                Nguyễn Văn An
-                                            </p>
-                                            <p class="text-black-50">
-                                                Khách hàng mới
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="subscribe pb-8">
-            <div class="container bg-success py-7 rounded-4 rounded-md-4 position-relative subscribe-body">
-                <img class="position-absolute w-100 subscribe-img opacity-50" src="./images/img_thumb2.png" alt="" />
-                <div class="row position-relative" style="z-index: 1">
-                    <div class="offset-md-3 col-md-6">
-                        <div class="h-100 d-flex flex-column justify-content-center">
-                            <div class="mb-3">
-                                <h3 class="display-4 fw-bold text-center text-white">
-                                    Nhận thông tin khuyến mãi và an toàn mới
-                                    nhất
-                                </h3>
-                            </div>
-                            <form class="button-group d-flex gap-2">
-                                <input type="email" class="form-control rounded-5 text-black"
-                                    placeholder="Enter your email..." required />
-                                <button class="btn btn-primary fw-bold text-uppercase d-flex align-items-center">
-                                    Subscribe
-                                    <span class="fa-stack sm-text ms-1" style="margin-bottom: 1px">
-                                        <i class="fas fa-circle fa-stack-2x text-black"></i>
-                                        <i class="fas fa-play fa-stack-1x text-primary"></i>
-                                    </span>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="pb-6 text-center text-white footer pt-7 lg-text text-md-start">
-        <div class="container">
-            <div
-                class="flex-wrap gap-5 mb-5 d-flex flex-column flex-md-row gap-md-0 justify-content-between align-items-center">
-                <img src="./images/iconhelmet.png" alt="" style="width: 100px" />
-                <div class="gap-2 location d-flex">
-                    <span><i class="fa-regular fa-location-dot text-primary"></i></span>
-                    <p class="m-0 fw-bold">
-                        IUH NGUYỄN VĂN BẢO<br />
-                        số 12 Phường 1 Gò Vấp
-                    </p>
-                </div>
-                <div class="gap-2 open-time d-flex">
-                    <span><i class="fa-regular fa-clock text-primary"></i></span>
-                    <div>
-                        <p class="m-0 fw-bold">Mon to Sun:</p>
-                        <p class="m-0">8:00 AM To 6:00 PM</p>
-                    </div>
-                </div>
-                <div class="gap-2 location d-flex">
-                    <span><i class="fa-regular fa-envelope text-primary"></i></span>
-                    <div>
-                        <p class="m-0 fw-bold">Email Us:</p>
-                        <p class="m-0">16TYTH@GMAIL.COM</p>
-                    </div>
-                </div>
-                <p class="m-0 phone-number fw-bold text-primary fs-2">
-                    (090)-18007170
-                </p>
+    <footer
+      class="pb-6 text-center text-white footer pt-7 lg-text text-md-start"
+    >
+      <div class="container">
+        <div
+          class="flex-wrap gap-5 mb-5 d-flex flex-column flex-md-row gap-md-0 justify-content-between align-items-center"
+        >
+          <img src="./images/iconhelmet.png" alt="" style="width: 100px" />
+          <div class="gap-2 location d-flex">
+            <span><i class="fa-regular fa-location-dot text-primary"></i></span>
+            <p class="m-0 fw-bold">
+              IUH NGUYỄN VĂN BẢO<br />
+              số 12 Phường 1 Gò Vấp
+            </p>
+          </div>
+          <div class="gap-2 open-time d-flex">
+            <span><i class="fa-regular fa-clock text-primary"></i></span>
+            <div>
+              <p class="m-0 fw-bold">Mon to Sun:</p>
+              <p class="m-0">8:00 AM To 6:00 PM</p>
             </div>
-            <img class="mb-5" src="images/footer_divide.png" alt="" style="max-width: 100%" />
-            <div class="row mb-7">
-                <div class="col-md-3">
-                    <div class="mb-3">
-                        <h4 class="fw-bold">
-                            Tham gia cộng đồng và nhận ưu đãi đặc biệt!
-                        </h4>
-                    </div>
-                    <div class="mb-3">
-                        <p class="text-white-50">
-                            Với bộ sưu tập nón bảo hiểm đa dạng về kiểu
-                            dáng, mẫu mã và tính năng, chúng tôi tự tin mang
-                            đến cho bạn những sản phẩm chất lượng cao, đáp
-                            ứng mọi nhu cầu và phong cách. Hãy để chúng tôi
-                            giúp bạn chọn được chiếc nón bảo hiểm ưng ý
-                            nhất.
-                        </p>
-                    </div>
-                    <div>
-                        <a href="register.html" class="py-3 btn btn-light fw-bold text-uppercase">
-                            THAM GIA
-                            <span class="fa-stack super-sm-text ms-1" style="margin-bottom: 2px">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="text-white fas fa-play fa-stack-1x"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="mt-5 col-md-9 mt-md-0">
-                    <div class="gap-5 row gap-md-0">
-                        <div class="offset-md-2 col-md-2">
-                            <div class="mb-4">
-                                <p class="fw-bold text-uppercase xl-text">
-                                    SẢN PHẨM
-                                </p>
-                            </div>
-                            <ul class="gap-2 list-unstyled vstack">
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">Nón BẢO HIỂM TRƠN</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">NÓN BẢO HIỂM CÓ KÍNH</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">NÓN BẢO HIỂM SƠN MÀI</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">NÓN BẢO HIỂM HỌA TIẾT</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">NÓN BẢO HIỂM 3/4</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="offset-md-2 col-md-2">
-                            <div class="mb-3">
-                                <p class="fw-bold text-uppercase xl-text">
-                                    HỖ TRỢ KHÁCH HÀNG
-                                </p>
-                            </div>
-                            <ul class="gap-2 list-unstyled vstack">
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">QUY ĐỊNH CHUNG</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">HƯỚNG DẪN TẠO TÀI KHOẢN</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">HƯỚNG DẪN MUA HÀNG</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">CHÍNH SÁCH ĐỔI SẢN PHẨM</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="offset-md-2 col-md-2">
-                            <div class="mb-3">
-                                <p class="fw-bold text-uppercase xl-text">
-                                    THÔNG TIN LIÊN HỆ
-                                </p>
-                            </div>
-                            <ul class="gap-2 list-unstyled vstack">
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">HOTLINE MUA HÀNG:
-                                        18007179</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">HOTLINE CSKH: 18007078</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">EMAIL: 16TYTH@GMAIL.COM</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">WEBSITE: NONSON.VN</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white-50 text-decoration-none">ĐỊA CHỈ: IUH TPHCM</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="gap-2 location d-flex">
+            <span><i class="fa-regular fa-envelope text-primary"></i></span>
+            <div>
+              <p class="m-0 fw-bold">Email Us:</p>
+              <p class="m-0">16TYTH@GMAIL.COM</p>
             </div>
-            <div class="row">
-                <div class="col-12 d-flex flex-column flex-md-row">
-                    <div class="wrap_content_footer">
-                        <p class="text-white-50">
-                            Copyright &copy; 2025
-                            <span class="text-white">SHOPTEAM12</span>
-                        </p>
-
-                        <p><b>THIẾT KẾ WEBSITE: </b>Nhóm 12</p>
-                    </div>
-                    <div class="ms-md-auto">
-                        <a href="#" class="text-decoration-none">
-                            <span class="fa-stack">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="text-white fab fa-facebook-f fa-stack-1x"></i>
-                            </span>
-                        </a>
-                        <a href="#" class="text-decoration-none">
-                            <span class="fa-stack">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="text-white fab fa-twitter fa-stack-1x"></i>
-                            </span>
-                        </a>
-                        <a href="#" class="text-decoration-none">
-                            <span class="fa-stack">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="text-white fab fa-instagram fa-stack-1x"></i>
-                            </span>
-                        </a>
-                        <a href="#" class="text-decoration-none">
-                            <span class="fa-stack">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="text-white fab fa-pinterest fa-stack-1x"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <p class="m-0 phone-number fw-bold text-primary fs-2">
+            (090)-18007170
+          </p>
         </div>
+        <img
+          class="mb-5"
+          src="images/footer_divide.png"
+          alt=""
+          style="max-width: 100%"
+        />
+        <div class="row mb-7">
+          <div class="col-md-3">
+            <div class="mb-3">
+              <h4 class="fw-bold">
+                Tham gia cộng đồng và nhận ưu đãi đặc biệt!
+              </h4>
+            </div>
+            <div class="mb-3">
+              <p class="text-white-50">
+                Với bộ sưu tập nón bảo hiểm đa dạng về kiểu dáng, mẫu mã và tính
+                năng, chúng tôi tự tin mang đến cho bạn những sản phẩm chất
+                lượng cao, đáp ứng mọi nhu cầu và phong cách. Hãy để chúng tôi
+                giúp bạn chọn được chiếc nón bảo hiểm ưng ý nhất.
+              </p>
+            </div>
+            <div>
+              <a
+                href="register.html"
+                class="py-3 btn btn-light fw-bold text-uppercase"
+              >
+                THAM GIA
+                <span
+                  class="fa-stack super-sm-text ms-1"
+                  style="margin-bottom: 2px"
+                >
+                  <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                  <i class="text-white fas fa-play fa-stack-1x"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="mt-5 col-md-9 mt-md-0">
+            <div class="gap-5 row gap-md-0">
+              <div class="offset-md-2 col-md-2">
+                <div class="mb-4">
+                  <p class="fw-bold text-uppercase xl-text">SẢN PHẨM</p>
+                </div>
+                <ul class="gap-2 list-unstyled vstack">
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >Nón BẢO HIỂM TRƠN</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >NÓN BẢO HIỂM CÓ KÍNH</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >NÓN BẢO HIỂM SƠN MÀI</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >NÓN BẢO HIỂM HỌA TIẾT</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >NÓN BẢO HIỂM 3/4</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="offset-md-2 col-md-2">
+                <div class="mb-3">
+                  <p class="fw-bold text-uppercase xl-text">
+                    HỖ TRỢ KHÁCH HÀNG
+                  </p>
+                </div>
+                <ul class="gap-2 list-unstyled vstack">
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >QUY ĐỊNH CHUNG</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >HƯỚNG DẪN TẠO TÀI KHOẢN</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >HƯỚNG DẪN MUA HÀNG</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >CHÍNH SÁCH ĐỔI SẢN PHẨM</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="offset-md-2 col-md-2">
+                <div class="mb-3">
+                  <p class="fw-bold text-uppercase xl-text">
+                    THÔNG TIN LIÊN HỆ
+                  </p>
+                </div>
+                <ul class="gap-2 list-unstyled vstack">
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >HOTLINE MUA HÀNG: 18007179</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >HOTLINE CSKH: 18007078</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >EMAIL: 16TYTH@GMAIL.COM</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >WEBSITE: NONSON.VN</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white-50 text-decoration-none"
+                      >ĐỊA CHỈ: IUH TPHCM</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex flex-column flex-md-row">
+            <div class="wrap_content_footer">
+              <p class="text-white-50">
+                Copyright &copy; 2025
+                <span class="text-white">SHOPTEAM12</span>
+              </p>
+
+              <p><b>THIẾT KẾ WEBSITE: </b>Nhóm 12</p>
+            </div>
+            <div class="ms-md-auto">
+              <a href="#" class="text-decoration-none">
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                  <i class="text-white fab fa-facebook-f fa-stack-1x"></i>
+                </span>
+              </a>
+              <a href="#" class="text-decoration-none">
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                  <i class="text-white fab fa-twitter fa-stack-1x"></i>
+                </span>
+              </a>
+              <a href="#" class="text-decoration-none">
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                  <i class="text-white fab fa-instagram fa-stack-1x"></i>
+                </span>
+              </a>
+              <a href="#" class="text-decoration-none">
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                  <i class="text-white fab fa-pinterest fa-stack-1x"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -701,6 +913,5 @@
     <script src="js/show-acccount.js"></script>
     <script src="js/data-blogs.js"></script>
     <script src="js/home.js"></script>
-</body>
-
+  </body>
 </html>
