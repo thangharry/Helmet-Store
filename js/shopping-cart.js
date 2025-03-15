@@ -27,8 +27,14 @@ function assignHeartEvent() {
                     JSON.stringify(storageFavoriteValue)
                 );
             } else {
-                storageFavoriteValue.splice(storageFavoriteValue.indexOf(codeSP), 1);
-                localStorage.setItem(storageFavorite, JSON.stringify(storageFavoriteValue));
+                storageFavoriteValue.splice(
+                    storageFavoriteValue.indexOf(codeSP),
+                    1
+                );
+                localStorage.setItem(
+                    storageFavorite,
+                    JSON.stringify(storageFavoriteValue)
+                );
             }
         });
     });
@@ -49,9 +55,9 @@ function assignCartEvent() {
             const codeSP = e.currentTarget.getAttribute("data-codeProduct");
             quantityOfCurrentProduct.setAttribute("data-CodeSP", `${codeSP}`);
             quantityOfCurrentProduct.textContent = `${e.target.previousElementSibling?.tagName.toLowerCase() ===
-                "input"
-                ? e.target.previousElementSibling.value
-                : 1
+                    "input"
+                    ? e.target.previousElementSibling.value
+                    : 1
                 }`;
             const qtyStorage = quantityOfCurrentProduct.textContent;
             if (e.currentTarget.classList.contains("cart-selected")) {
@@ -65,12 +71,19 @@ function assignCartEvent() {
                     storageQtyCart,
                     JSON.stringify(storageQtyCartValue)
                 );
-                flash("success", `Added to cart <a class="view-cart link-primary fw-bold cursor-pointer ms-2">View Cart</a>`)
-                document.querySelector(".view-cart").addEventListener("click", () => {
-                    renderCart()
-                    var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById('shoppingCartOffcanvas'))
-                    bsOffcanvas.show()
-                })
+                flash(
+                    "success",
+                    `Added to cart <a class="view-cart link-primary fw-bold cursor-pointer ms-2">View Cart</a>`
+                );
+                document
+                    .querySelector(".view-cart")
+                    .addEventListener("click", () => {
+                        renderCart();
+                        var bsOffcanvas = new bootstrap.Offcanvas(
+                            document.getElementById("shoppingCartOffcanvas")
+                        );
+                        bsOffcanvas.show();
+                    });
             } else {
                 storageCartValue.splice(storageCartValue.indexOf(codeSP), 1);
                 localStorage.setItem(
@@ -82,12 +95,19 @@ function assignCartEvent() {
                     storageQtyCart,
                     JSON.stringify(storageQtyCartValue)
                 );
-                flash("success", `Removed from cart <a class="view-cart fw-bold cursor-pointer ms-2">View Cart</a>`)
-                document.querySelector(".view-cart").addEventListener("click", () => {
-                    renderCart()
-                    var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById('shoppingCartOffcanvas'))
-                    bsOffcanvas.show()
-                })
+                flash(
+                    "success",
+                    `Removed from cart <a class="view-cart fw-bold cursor-pointer ms-2">View Cart</a>`
+                );
+                document
+                    .querySelector(".view-cart")
+                    .addEventListener("click", () => {
+                        renderCart();
+                        var bsOffcanvas = new bootstrap.Offcanvas(
+                            document.getElementById("shoppingCartOffcanvas")
+                        );
+                        bsOffcanvas.show();
+                    });
             }
             cartCount();
         });
@@ -109,7 +129,7 @@ function getTotalPriceInCart() {
             return (item.price * (100 - item.discount) * temp) / 100;
         })
         .reduce((accumulator, currentValue) => accumulator + currentValue, 0)
-        .toFixed(2);
+        .toFixed(3);
 }
 function renderCart() {
     dataCart = dataProductAll.filter(function (item) {
@@ -123,20 +143,29 @@ function renderCart() {
             discount = false;
         }
         return `
-                <div class=" d-flex align-items-center cart-show-fix mb-4 gap-4" style="position:relative" data-codeSPCommon=${item.code}>
+                <div class=" d-flex align-items-center cart-show-fix mb-4 gap-4" style="position:relative" data-codeSPCommon=${item.code
+            }>
                     <div class="">
-                        <img class="border border-grey border-1 rounded-3" src=${item.imgUrl} style="max-width:90px" alt=${item.name}/>
+                        <img class="border border-grey border-1 rounded-3" src=${item.imgUrl
+            } style="max-width:90px" alt=${item.name}/>
                     </div>
                     <div class=" d-flex flex-column gap-2 align-items-start">
                         <a class="list-products__item__name" style="display: block; font-size: 16px; line-height: 1.3;">
                             ${item.name}
                         </a>
                         <div class="product__group-prices">
-                            <p class="w-100 m-0 ${discount ? " real__price" : "normal__price"}">${item.price.toLocaleString("vi-VN")} VNĐ</p>
-                            <p class="w-100 m-0 sale__price ${discount ? "" : " d-none"}">${((item.price * (100 - item.discount)) / 100).toLocaleString("vi-VN")} VNĐ</p>
-
+                            <p class="w-100 m-0 ${discount ? " real__price" : "normal__price"
+            }">${item.price.toFixed(3)} VNĐ</p>
+                            <p class="w-100 m-0 sale__price ${discount ? "" : " d-none"
+            }" >${(
+                (item.price * (100 - item.discount)) /
+                100
+            ).toFixed(3)}VNĐ</p>
                         </div>
-                        <div class="lg-text">Quantity: ${storageQtyCartValue[storageCartValue.indexOf(item.code)]}</div>
+                        <div class="lg-text">Số Lượng: ${storageQtyCartValue[
+            storageCartValue.indexOf(item.code)
+            ]
+            }</div>
                     </div>
                     <div class="cart-remove"
                         style="cursor:pointer;position:absolute;color:gray;z-index:99;top:0;right:0;height:20px;width:20px"><svg
@@ -151,30 +180,39 @@ function renderCart() {
     if (storageCartValue.length == 0) {
         cartShowBody.innerHTML = `<div> No products in the cart</div>`;
         if (document.querySelector(".offcanvas-body").children[1]) {
-            document.querySelector(".offcanvas-body").removeChild(document.querySelector(".offcanvas-body").children[1])
+            document
+                .querySelector(".offcanvas-body")
+                .removeChild(
+                    document.querySelector(".offcanvas-body").children[1]
+                );
         }
     } else {
         cartShowBody.innerHTML = cartShowContent.join("");
-        const cartTotalPrice = document.createElement("div")
-        cartTotalPrice.className = "w-100 d-flex flex-column car-total-price gap-3 py-3 border-top border-grey"
+        const cartTotalPrice = document.createElement("div");
+        cartTotalPrice.className =
+            "w-100 d-flex flex-column car-total-price gap-3 py-3 border-top border-grey";
         cartTotalPrice.innerHTML = `
-            <div class="total text-black d-flex justify-content-between gap-2">Subtotal : <span class="total-price text-primary">$${getTotalPriceInCart()}</span></div>
-            <button class="btn btn-primary rounded-5 text-uppercase fw-bold py-3 checkout">
-                Checkout
+            <div class="total text-black d-flex justify-content-between gap-2">Tổng Tiền : <span class="total-price " style="font-size: 20px; color:#3a5270;">${getTotalPriceInCart()} VNĐ</span></div>
+            <button class="btn btn-primary rounded-5 text-uppercase fw-bold py-3 checkout" style="background-color:#3a5270; color:#fff;">
+                Kiểm tra giỏ hàng
                 <span class="fa-stack sm-text ms-1" style="margin-bottom: 2px;">
                     <i class="fas fa-circle fa-stack-2x text-black"></i>
                     <i class="fas fa-play fa-stack-1x text-primary"></i>
                 </span>
             </button>
-        `
+        `;
         if (document.querySelector(".offcanvas-body").children[1]) {
-            document.querySelector(".offcanvas-body").removeChild(document.querySelector(".offcanvas-body").children[1])
+            document
+                .querySelector(".offcanvas-body")
+                .removeChild(
+                    document.querySelector(".offcanvas-body").children[1]
+                );
         }
 
-        document.querySelector(".offcanvas-body").appendChild(cartTotalPrice)
-        document.querySelector(".checkout").addEventListener("click", e => {
-            window.location.href = "cart.html"
-        })
+        document.querySelector(".offcanvas-body").appendChild(cartTotalPrice);
+        document.querySelector(".checkout").addEventListener("click", (e) => {
+            window.location.href = "cart.html";
+        });
     }
     assignRemoveCart();
 }

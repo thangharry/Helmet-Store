@@ -30,10 +30,11 @@
         />
         <style>
             .breadcrumb-wrapper {
-                background: url("images/bg-curly-dark.png"),
-                    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                    url("images/breadcrumb_our_blog.png") center center
-                        no-repeat;
+                background: linear-gradient(
+                        rgba(0, 0, 0, 0.2),
+                        rgba(0, 0, 0, 0.2)
+                    ),
+                    url("./images/bgdangki.jpg") center center no-repeat;
                 background-size: cover;
             }
         </style>
@@ -175,7 +176,7 @@
         >
             <div class="offcanvas-header border-bottom py-4">
                 <h5 class="offcanvas-title" id="offcanvasLabel">
-                    Shopping cart
+                    Giỏ hàng của tôi
                 </h5>
                 <button
                     type="button"
@@ -186,7 +187,7 @@
             </div>
             <div class="offcanvas-body">
                 <p class="text-black-50 text-center xxl-text cart-show-body">
-                    No products in the cart
+                    Hiện chưa có sản phẩm nào trong giỏ hàng
                 </p>
             </div>
         </div>
@@ -438,11 +439,11 @@
                 >
                     <thead>
                         <tr>
-                            <th>Product</th>
-                            <th>Unitprice</th>
-                            <th>Quantity</th>
-                            <th>Linetotal</th>
-                            <th class="text-end">Action</th>
+                            <th>Sản Phẩm</th>
+                            <th>Giá</th>
+                            <th>Số Lượng</th>
+
+                            <th class="text-end">Trạng Thái</th>
                         </tr>
                     </thead>
                     <tbody class="shopping-cart-body"></tbody>
