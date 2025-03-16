@@ -161,6 +161,218 @@
             </div>
         </nav>
 
+        <!-- the shopping cart offcanvas -->
+        <div
+            class="offcanvas offcanvas-end text-black"
+            tabindex="-1"
+            id="shoppingCartOffcanvas"
+            aria-labelledby="offcanvasLabel"
+        >
+            <div class="offcanvas-header border-bottom py-4">
+                <h5 class="offcanvas-title" id="offcanvasLabel">
+                    Giỏ hàng của tôi
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="offcanvas-body">
+                <p class="text-black-50 text-center xxl-text cart-show-body">
+                    Hiện chưa có sản phẩm nào trong giỏ hàng
+                </p>
+            </div>
+        </div>
+
+        <!-- the nav bar canvas on small screen => mobile  -->
+        <div
+            class="offcanvas offcanvas-start text-bg-light"
+            tabindex="-1"
+            id="navbar-on-mobile"
+            style="z-index: 1055"
+        >
+            <div class="offcanvas-header px-4 pt-4">
+                <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">
+                    MENU
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul
+                    class="navbar-nav-mobile fw-bold list-group list-group-flush"
+                >
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none active"
+                            href="./index.html"
+                            >Trang Chủ</a
+                        >
+                    </li>
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none"
+                            href="./shop.html"
+                            >Cửa Hàng</a
+                        >
+                    </li>
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none"
+                            href="./about.html"
+                            >Về Chúng Tôi</a
+                        >
+                    </li>
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none"
+                            href="./contact.html"
+                            >Liên Hệ</a
+                        >
+                    </li>
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none p-0"
+                            href="./store-locator.html"
+                        >
+                            <span class="me-2"
+                                ><i
+                                    class="fa-solid fa-location-dot text-primary"
+                                ></i
+                            ></span>
+                            Địa Chỉ
+                        </a>
+                    </li>
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3 dropdown dropstart"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none p-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#signInModal"
+                            href="./register.html"
+                        >
+                            <span class="me-2"
+                                ><i class="fa-solid fa-user text-primary"></i
+                            ></span>
+                            Đăng Nhập
+                        </a>
+                        <!-- Modal -->
+                        <div
+                            class="modal fade"
+                            id="signInModal"
+                            data-bs-backdrop="static"
+                            data-bs-keyboard="false"
+                            style="z-index: 1800"
+                        >
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header border-bottom-0">
+                                        <button
+                                            type="button"
+                                            class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"
+                                        ></button>
+                                    </div>
+                                    <div class="modal-body p-0">
+                                        <div
+                                            class="sign-in px-4 pt-3 pb-3 bg-light text-black w-100"
+                                        >
+                                            <div
+                                                class="d-flex justify-content-between"
+                                            >
+                                                <h3>Đăng nhập</h3>
+                                                <a href="#" class="text-primary"
+                                                    >Tạo tài khoản</a
+                                                >
+                                            </div>
+                                            <form class="mb-3">
+                                                <div class="mb-3">
+                                                    <label
+                                                        for="username"
+                                                        class="form-label"
+                                                        >Tên tài khoản hoặc
+                                                        email<span
+                                                            class="text-danger"
+                                                            >*</span
+                                                        ></label
+                                                    >
+                                                    <input
+                                                        class="form-control text-black"
+                                                        type="text"
+                                                        id="username"
+                                                        placeholder="Username"
+                                                    />
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label
+                                                        for="password"
+                                                        class="form-label"
+                                                        >Mật khẩu
+                                                        <span
+                                                            class="text-danger"
+                                                            >*</span
+                                                        ></label
+                                                    >
+                                                    <input
+                                                        class="form-control text-black"
+                                                        type="text"
+                                                        id="password"
+                                                        placeholder="Password"
+                                                    />
+                                                </div>
+                                                <div class="d-grid">
+                                                    <button
+                                                        class="btn btn-primary fw-bold text-uppercase"
+                                                    >
+                                                        Đăng nhập
+                                                        <span
+                                                            class="fa-stack sm-text ms-1"
+                                                            style="
+                                                                margin-bottom: 1px;
+                                                            "
+                                                        >
+                                                            <i
+                                                                class="fas fa-circle fa-stack-2x text-black"
+                                                            ></i>
+                                                            <i
+                                                                class="fas fa-play fa-stack-1x text-primary"
+                                                            ></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                            <div class="text-end">
+                                                <p class="text-primary">
+                                                    Quên mật khẩu?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <section
             class="breadcrumb-wrapper bg-black text-white pt-8 pb-8 bgAbout"
         >
