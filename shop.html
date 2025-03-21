@@ -16,6 +16,8 @@
 
         <!-- Custom Styles -->
         <link rel="stylesheet" href="./css/styles.css" />
+
+        <link rel="stylesheet" href="./css/font.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -35,10 +37,11 @@
 
     <body>
         <nav
-            class="navbar navbar-expand-lg navbar-dark position-absolute w-100 navigationAbout"
+            class="navbar navbar-expand-lg navbar-dark position-absolute w-100"
             style="font-size: 14px"
         >
-            <div class="container-fluid">
+            <!-- test git hu -->
+            <div class="container-fluid background-header">
                 <!-- the hamburger -->
                 <button
                     class="navbar-toggler"
@@ -46,28 +49,18 @@
                     data-bs-toggle="offcanvas"
                     data-bs-target="#navbar-on-mobile"
                 >
-                    <span
-                        class="navbar-toggler-icon"
-                        style="
-                            color: #3a5270 !important;
-                            background-color: #3a5270;
-                        "
-                    ></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- the brand -->
-                <a class="mx-auto navbar-brand" href="./index.html">
-                    <img
-                        src="./images/iconhelmet.png"
-                        alt=""
-                        style="width: 75px"
-                    />
+                <a class="navbar-brand mx-auto" href="./index.html">
+                    <img src="images/iconhelmet.png" style="width: 75px" />
                 </a>
 
                 <!-- the cart on small screen => mobile -->
                 <li class="ms-auto d-inline-block d-lg-none cart-show">
                     <a
-                        class="p-0 nav-link-mobile"
+                        class="nav-link-mobile p-0"
                         data-bs-toggle="offcanvas"
                         data-bs-target="#shoppingCartOffcanvas"
                     >
@@ -81,49 +74,49 @@
 
                 <!-- the nav bar on large screen => desktop -->
                 <div
-                    class="collapse navbar-collapse"
+                    class="collapse navbar-collapse font"
                     id="navbarSupportedContent"
                 >
                     <ul class="navbar-nav navbar-nav-1 ms-lg-6 mb-lg-0 fw-bold">
                         <li class="nav-item">
                             <a
                                 class="nav-link nav-link-hover"
+                                aria-current="page"
                                 href="./index.html"
                             >
-                                <span class="nav-link-hover">Trang Chủ</span>
+                                <span class="nav-link-hover">Trang chủ</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a
-                                class="nav-link nav-link-hover active"
-                                href="shop.html"
+                                class="nav-link active nav-link-hover"
+                                href="./shop.html"
                             >
-                                <span class="nav-link-hover">Cửa Hàng</span>
+                                <span class="nav-link-hover">Cửa hàng</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a
                                 class="nav-link nav-link-hover"
-                                href="about.html"
+                                href="./about.html"
                             >
-                                <span class="nav-link-hover">Về Chúng Tôi</span>
+                                <span class="nav-link-hover">Về chúng tôi</span>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a
                                 class="nav-link nav-link-hover"
-                                href="contact.html"
+                                href="./contact.html"
                             >
-                                <span class="nav-link-hover">Liên Hệ</span>
+                                <span class="nav-link-hover">Liên hệ</span>
                             </a>
                         </li>
                     </ul>
                     <ul
-                        class="mb-2 navbar-nav navbar-nav-2 ms-auto mb-lg-0 fw-bold d-flex"
+                        class="navbar-nav navbar-nav-2 ms-auto mb-2 mb-lg-0 fw-bold d-flex"
                     >
                         <li class="nav-item">
-                            <a class="p-0 nav-link" href="store-locator.html">
+                            <a class="nav-link p-0" href="./store-locator.html">
                                 <span class="me-2"
                                     ><i
                                         class="fa-solid fa-location-dot text-primary"
@@ -132,11 +125,18 @@
                                 Địa chỉ
                             </a>
                         </li>
-                        <li class="nav-item dropdown dropstart account"></li>
-                        <li class="nav-item cart-show">
+                        <li class="nav-item dropdown dropstart account">
+                            <span class="me-2"
+                                ><i
+                                    class="fa-solid fa-location-dot text-primary"
+                                ></i
+                            ></span>
+                            Đăng nhập
+                        </li>
+                        <li class="nav-item">
                             <a
-                                class="p-0 nav-link"
-                                href="#"
+                                class="nav-link p-0"
+                                href="./cart.html"
                                 data-bs-toggle="offcanvas"
                                 data-bs-target="#shoppingCartOffcanvas"
                             >
@@ -154,7 +154,7 @@
                                         class="fas fa-circle text-primary fa-stack-2x"
                                     ></i>
                                     <p
-                                        class="text-black fa-stack-1x cart-count"
+                                        class="fa-stack-1x text-black cart-count"
                                     >
                                         0
                                     </p>
@@ -196,9 +196,9 @@
             id="navbar-on-mobile"
             style="z-index: 1055"
         >
-            <div class="offcanvas-header px-4 pt-4">
+            <div class="px-4 pt-4 offcanvas-header">
                 <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">
-                    MENU
+                    main menu
                 </h5>
                 <button
                     type="button"
@@ -207,74 +207,98 @@
                     aria-label="Close"
                 ></button>
             </div>
+            <img
+                class="mx-4"
+                src="./images/line-break.png"
+                alt=""
+                style="width: 60px"
+            />
             <div class="offcanvas-body">
                 <ul
                     class="navbar-nav-mobile fw-bold list-group list-group-flush"
                 >
                     <li
-                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                        class="p-0 py-2 mx-3 navbar-item-mobile list-group-item"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none"
+                            href="#"
+                            >HOME</a
+                        >
+                    </li>
+                    <li
+                        class="p-0 py-2 mx-3 navbar-item-mobile list-group-item"
                     >
                         <a
                             class="navbar-link-mobile text-decoration-none active"
-                            href="./index.html"
-                            >Trang Chủ</a
+                            href="#"
+                            >SHOP</a
                         >
                     </li>
                     <li
-                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                        class="p-0 py-2 mx-3 navbar-item-mobile list-group-item"
                     >
                         <a
                             class="navbar-link-mobile text-decoration-none"
-                            href="./shop.html"
-                            >Cửa Hàng</a
+                            href="#"
+                            >ABOUT</a
                         >
                     </li>
                     <li
-                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                        class="p-0 py-2 mx-3 navbar-item-mobile list-group-item"
                     >
                         <a
                             class="navbar-link-mobile text-decoration-none"
-                            href="./about.html"
-                            >Về Chúng Tôi</a
+                            href="#"
+                            >BLOG</a
                         >
                     </li>
                     <li
-                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                        class="p-0 py-2 mx-3 navbar-item-mobile list-group-item"
                     >
                         <a
                             class="navbar-link-mobile text-decoration-none"
-                            href="./contact.html"
-                            >Liên Hệ</a
+                            href="#"
+                            >PAGES</a
                         >
                     </li>
                     <li
-                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                        class="p-0 py-2 mx-3 navbar-item-mobile list-group-item"
                     >
                         <a
-                            class="navbar-link-mobile text-decoration-none p-0"
-                            href="./store-locator.html"
+                            class="navbar-link-mobile text-decoration-none"
+                            href="#"
+                            >CONTACT</a
+                        >
+                    </li>
+                    <li
+                        class="p-0 py-2 mx-3 navbar-item-mobile list-group-item"
+                    >
+                        <a
+                            class="p-0 navbar-link-mobile text-decoration-none"
+                            href="#"
                         >
                             <span class="me-2"
                                 ><i
                                     class="fa-solid fa-location-dot text-primary"
                                 ></i
                             ></span>
-                            Địa Chỉ
+                            Store Locator
                         </a>
                     </li>
                     <li
-                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3 dropdown dropstart"
+                        class="p-0 py-2 mx-3 navbar-item-mobile list-group-item dropdown dropstart"
                     >
                         <a
-                            class="navbar-link-mobile text-decoration-none p-0"
+                            class="p-0 navbar-link-mobile text-decoration-none"
                             data-bs-toggle="modal"
                             data-bs-target="#signInModal"
-                            href="./register.html"
+                            href="#"
                         >
                             <span class="me-2"
                                 ><i class="fa-solid fa-user text-primary"></i
                             ></span>
-                            Đăng Nhập
+                            Sign In
                         </a>
                         <!-- Modal -->
                         <div
@@ -294,16 +318,16 @@
                                             aria-label="Close"
                                         ></button>
                                     </div>
-                                    <div class="modal-body p-0">
+                                    <div class="p-0 modal-body">
                                         <div
-                                            class="sign-in px-4 pt-3 pb-3 bg-light text-black w-100"
+                                            class="px-4 pt-3 pb-3 text-black sign-in bg-light w-100"
                                         >
                                             <div
                                                 class="d-flex justify-content-between"
                                             >
-                                                <h3>Đăng nhập</h3>
+                                                <h3>Sign in</h3>
                                                 <a href="#" class="text-primary"
-                                                    >Tạo tài khoản</a
+                                                    >Create an Account</a
                                                 >
                                             </div>
                                             <form class="mb-3">
@@ -311,14 +335,14 @@
                                                     <label
                                                         for="username"
                                                         class="form-label"
-                                                        >Tên tài khoản hoặc
-                                                        email<span
+                                                        >Username or email
+                                                        <span
                                                             class="text-danger"
                                                             >*</span
                                                         ></label
                                                     >
                                                     <input
-                                                        class="form-control text-black"
+                                                        class="text-black form-control"
                                                         type="text"
                                                         id="username"
                                                         placeholder="Username"
@@ -328,14 +352,14 @@
                                                     <label
                                                         for="password"
                                                         class="form-label"
-                                                        >Mật khẩu
+                                                        >Password
                                                         <span
                                                             class="text-danger"
                                                             >*</span
                                                         ></label
                                                     >
                                                     <input
-                                                        class="form-control text-black"
+                                                        class="text-black form-control"
                                                         type="text"
                                                         id="password"
                                                         placeholder="Password"
@@ -345,15 +369,15 @@
                                                     <button
                                                         class="btn btn-primary fw-bold text-uppercase"
                                                     >
-                                                        Đăng nhập
+                                                        Login
                                                         <span
-                                                            class="fa-stack sm-text ms-1"
+                                                            class="fa-stack super-sm-text ms-1"
                                                             style="
                                                                 margin-bottom: 1px;
                                                             "
                                                         >
                                                             <i
-                                                                class="fas fa-circle fa-stack-2x text-black"
+                                                                class="text-black fas fa-circle fa-stack-2x"
                                                             ></i>
                                                             <i
                                                                 class="fas fa-play fa-stack-1x text-primary"
@@ -364,7 +388,7 @@
                                             </form>
                                             <div class="text-end">
                                                 <p class="text-primary">
-                                                    Quên mật khẩu?
+                                                    Lost your password?
                                                 </p>
                                             </div>
                                         </div>
@@ -378,7 +402,7 @@
         </div>
 
         <section
-            class="pt-8 pb-8 text-white bg-black breadcrumb-wrapper bgAbout"
+            class="pt-8 pb-8 text-white bg-black breadcrumb-wrapper bgAbout font"
         >
             <div class="container">
                 <div class="row">
@@ -389,7 +413,7 @@
                         <h2 class="fw-bold display-2">CỬA HÀNG</h2>
                         <div class="gap-2 d-flex lg-text">
                             <a
-                                href="./index.html"
+                                href="home.html"
                                 class="m-0 text-decoration-none link-light"
                                 >Home Page</a
                             >
@@ -408,7 +432,7 @@
             </div>
         </section>
 
-        <main class="container main__shop d-flex">
+        <main class="container main__shop d-flex c font">
             <div class="shop__sidebar col-3">
                 <div class="shop__sidebar__categories">
                     <h4 class="pb-2 categories__header shop__sidebar__title">
@@ -567,86 +591,86 @@
                     </div>
                 </div>
                 <!-- <div class="mt-5 shop__sidebar__product__brands">
-                    <h4
-                        class="pb-2 product__brands__header shop__sidebar__title"
-                    >
-                        Product Brands
-                    </h4>
-                    <div
-                        class="gap-4 mt-3 product__brands__inner d-flex flex-column"
-                    >
+                        <h4
+                            class="pb-2 product__brands__header shop__sidebar__title"
+                        >
+                            Product Brands
+                        </h4>
                         <div
-                            class="gap-2 product__brand__group d-flex align-items-center"
+                            class="gap-4 mt-3 product__brands__inner d-flex flex-column"
                         >
                             <div
-                                class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                            ></div>
-                            <p class="product__brand__text shop__sidebar__text">
-                                Ainsworth
-                            </p>
-                        </div>
-                        <div
-                            class="gap-2 product__brand__group d-flex align-items-center"
-                        >
+                                class="gap-2 product__brand__group d-flex align-items-center"
+                            >
+                                <div
+                                    class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                ></div>
+                                <p class="product__brand__text shop__sidebar__text">
+                                    Ainsworth
+                                </p>
+                            </div>
                             <div
-                                class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                            ></div>
-                            <p class="product__brand__text shop__sidebar__text">
-                                Blue Buffalo
-                            </p>
-                        </div>
-                        <div
-                            class="gap-2 product__brand__group d-flex align-items-center"
-                        >
+                                class="gap-2 product__brand__group d-flex align-items-center"
+                            >
+                                <div
+                                    class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                ></div>
+                                <p class="product__brand__text shop__sidebar__text">
+                                    Blue Buffalo
+                                </p>
+                            </div>
                             <div
-                                class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                            ></div>
-                            <p class="product__brand__text shop__sidebar__text">
-                                Freshpet
-                            </p>
-                        </div>
-                        <div
-                            class="gap-2 product__brand__group d-flex align-items-center"
-                        >
+                                class="gap-2 product__brand__group d-flex align-items-center"
+                            >
+                                <div
+                                    class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                ></div>
+                                <p class="product__brand__text shop__sidebar__text">
+                                    Freshpet
+                                </p>
+                            </div>
                             <div
-                                class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                            ></div>
-                            <p class="product__brand__text shop__sidebar__text">
-                                Hill's Pet Nutrition
-                            </p>
-                        </div>
-                        <div
-                            class="gap-2 product__brand__group d-flex align-items-center"
-                        >
+                                class="gap-2 product__brand__group d-flex align-items-center"
+                            >
+                                <div
+                                    class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                ></div>
+                                <p class="product__brand__text shop__sidebar__text">
+                                    Hill's Pet Nutrition
+                                </p>
+                            </div>
                             <div
-                                class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                            ></div>
-                            <p class="product__brand__text shop__sidebar__text">
-                                Mars Petcare / Royal Canin
-                            </p>
-                        </div>
-                        <div
-                            class="gap-2 product__brand__group d-flex align-items-center"
-                        >
+                                class="gap-2 product__brand__group d-flex align-items-center"
+                            >
+                                <div
+                                    class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                ></div>
+                                <p class="product__brand__text shop__sidebar__text">
+                                    Mars Petcare / Royal Canin
+                                </p>
+                            </div>
                             <div
-                                class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                            ></div>
-                            <p class="product__brand__text shop__sidebar__text">
-                                Nestlé Purina PetCare
-                            </p>
-                        </div>
-                        <div
-                            class="gap-2 product__brand__group d-flex align-items-center"
-                        >
+                                class="gap-2 product__brand__group d-flex align-items-center"
+                            >
+                                <div
+                                    class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                ></div>
+                                <p class="product__brand__text shop__sidebar__text">
+                                    Nestlé Purina PetCare
+                                </p>
+                            </div>
                             <div
-                                class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                            ></div>
-                            <p class="product__brand__text shop__sidebar__text">
-                                WellPet
-                            </p>
+                                class="gap-2 product__brand__group d-flex align-items-center"
+                            >
+                                <div
+                                    class="border product__brand__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                ></div>
+                                <p class="product__brand__text shop__sidebar__text">
+                                    WellPet
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div> -->
+                    </div> -->
                 <div class="mt-5 shop__sidebar__products">
                     <h4 class="pb-2 products__header shop__sidebar__title">
                         Sản Phẩm Nổi Bật
@@ -749,133 +773,28 @@
                         <span>WishList</span>
                     </div>
                     <!-- <div class="filter-on-table-mobile position-relative">
-                        <div class="filterTM__btn">
-                            <span>Filter</span>
-                            <i class="fa-solid fa-filter"></i>
-                        </div>
-
-                        <div
-                            class="filter-on-table-mobile-sidebar position-absolute z-index-999"
-                        >
-                            <div class="shop__sidebar__categories">
-                                <h4
-                                    class="pb-2 categories__header shop__sidebar__title d-flex justify-content-between align-items-center"
-                                >
-                                    Categories
-                                    <i
-                                        class="fa-solid fa-xmark fs-4 text-danger close-filter-on-table-mobile-sidebar"
-                                    ></i>
-                                </h4>
-                                <div
-                                    class="gap-4 mt-3 categories__inner d-flex flex-column"
-                                >
-                                    <div
-                                        class="gap-2 category__group d-flex align-items-center"
+                            <div class="filterTM__btn">
+                                <span>Filter</span>
+                                <i class="fa-solid fa-filter"></i>
+                            </div>
+    
+                            <div
+                                class="filter-on-table-mobile-sidebar position-absolute z-index-999"
+                            >
+                                <div class="shop__sidebar__categories">
+                                    <h4
+                                        class="pb-2 categories__header shop__sidebar__title d-flex justify-content-between align-items-center"
                                     >
-                                        <div
-                                            class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                                        ></div>
-                                        <p
-                                            class="category__text shop__sidebar__text"
-                                        >
-                                            Dry Food
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="gap-2 category__group d-flex align-items-center"
-                                    >
-                                        <div
-                                            class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                                        ></div>
-                                        <p
-                                            class="category__text shop__sidebar__text"
-                                        >
-                                            Fresh & Prepared Meal
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="gap-2 category__group d-flex align-items-center"
-                                    >
-                                        <div
-                                            class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                                        ></div>
-                                        <p
-                                            class="category__text shop__sidebar__text"
-                                        >
-                                            Healthacare
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="gap-2 category__group d-flex align-items-center"
-                                    >
-                                        <div
-                                            class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                                        ></div>
-                                        <p
-                                            class="category__text shop__sidebar__text"
-                                        >
-                                            Premium Food
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="gap-2 category__group d-flex align-items-center"
-                                    >
-                                        <div
-                                            class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                                        ></div>
-                                        <p
-                                            class="category__text shop__sidebar__text"
-                                        >
-                                            Uncategorized
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="gap-2 category__group d-flex align-items-center"
-                                    >
-                                        <div
-                                            class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                                        ></div>
-                                        <p
-                                            class="category__text shop__sidebar__text"
-                                        >
-                                            Veterinary Diets
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="gap-2 category__group d-flex align-items-center"
-                                    >
-                                        <div
-                                            class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                                        ></div>
-                                        <p
-                                            class="category__text shop__sidebar__text"
-                                        >
-                                            Vitamins & Supplements
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="gap-2 category__group d-flex align-items-center category__dropdown"
-                                        id="category__dropdown-tm"
-                                    >
-                                        <div
-                                            class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
-                                        ></div>
-                                        <p
-                                            class="category__text shop__sidebar__text"
-                                        >
-                                            Wet Food
-                                        </p>
+                                        Categories
                                         <i
-                                            class="fa-solid fa-plus ms-auto category__dropdown-icon"
+                                            class="fa-solid fa-xmark fs-4 text-danger close-filter-on-table-mobile-sidebar"
                                         ></i>
-                                    </div>
+                                    </h4>
                                     <div
-                                        class="category__dropdown__panel"
-                                        id="category__dropdown__panel-tm"
-                                        style="display: none"
+                                        class="gap-4 mt-3 categories__inner d-flex flex-column"
                                     >
                                         <div
-                                            class="gap-2 mt-2 category__group d-flex align-items-center ps-3"
+                                            class="gap-2 category__group d-flex align-items-center"
                                         >
                                             <div
                                                 class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
@@ -883,11 +802,11 @@
                                             <p
                                                 class="category__text shop__sidebar__text"
                                             >
-                                                Chicken Free
+                                                Dry Food
                                             </p>
                                         </div>
                                         <div
-                                            class="gap-2 mt-2 category__group d-flex align-items-center ps-3"
+                                            class="gap-2 category__group d-flex align-items-center"
                                         >
                                             <div
                                                 class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
@@ -895,11 +814,11 @@
                                             <p
                                                 class="category__text shop__sidebar__text"
                                             >
-                                                Puppy
+                                                Fresh & Prepared Meal
                                             </p>
                                         </div>
                                         <div
-                                            class="gap-2 mt-2 category__group d-flex align-items-center ps-3"
+                                            class="gap-2 category__group d-flex align-items-center"
                                         >
                                             <div
                                                 class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
@@ -907,11 +826,11 @@
                                             <p
                                                 class="category__text shop__sidebar__text"
                                             >
-                                                Senior
+                                                Healthacare
                                             </p>
                                         </div>
                                         <div
-                                            class="gap-2 mt-2 category__group d-flex align-items-center ps-3"
+                                            class="gap-2 category__group d-flex align-items-center"
                                         >
                                             <div
                                                 class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
@@ -919,21 +838,126 @@
                                             <p
                                                 class="category__text shop__sidebar__text"
                                             >
-                                                Weight Control
+                                                Premium Food
                                             </p>
+                                        </div>
+                                        <div
+                                            class="gap-2 category__group d-flex align-items-center"
+                                        >
+                                            <div
+                                                class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                            ></div>
+                                            <p
+                                                class="category__text shop__sidebar__text"
+                                            >
+                                                Uncategorized
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="gap-2 category__group d-flex align-items-center"
+                                        >
+                                            <div
+                                                class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                            ></div>
+                                            <p
+                                                class="category__text shop__sidebar__text"
+                                            >
+                                                Veterinary Diets
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="gap-2 category__group d-flex align-items-center"
+                                        >
+                                            <div
+                                                class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                            ></div>
+                                            <p
+                                                class="category__text shop__sidebar__text"
+                                            >
+                                                Vitamins & Supplements
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="gap-2 category__group d-flex align-items-center category__dropdown"
+                                            id="category__dropdown-tm"
+                                        >
+                                            <div
+                                                class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                            ></div>
+                                            <p
+                                                class="category__text shop__sidebar__text"
+                                            >
+                                                Wet Food
+                                            </p>
+                                            <i
+                                                class="fa-solid fa-plus ms-auto category__dropdown-icon"
+                                            ></i>
+                                        </div>
+                                        <div
+                                            class="category__dropdown__panel"
+                                            id="category__dropdown__panel-tm"
+                                            style="display: none"
+                                        >
+                                            <div
+                                                class="gap-2 mt-2 category__group d-flex align-items-center ps-3"
+                                            >
+                                                <div
+                                                    class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                                ></div>
+                                                <p
+                                                    class="category__text shop__sidebar__text"
+                                                >
+                                                    Chicken Free
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="gap-2 mt-2 category__group d-flex align-items-center ps-3"
+                                            >
+                                                <div
+                                                    class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                                ></div>
+                                                <p
+                                                    class="category__text shop__sidebar__text"
+                                                >
+                                                    Puppy
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="gap-2 mt-2 category__group d-flex align-items-center ps-3"
+                                            >
+                                                <div
+                                                    class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                                ></div>
+                                                <p
+                                                    class="category__text shop__sidebar__text"
+                                                >
+                                                    Senior
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="gap-2 mt-2 category__group d-flex align-items-center ps-3"
+                                            >
+                                                <div
+                                                    class="border category__icon-select shop__sidebar__icon-select rounded-circle border-light-subtle border-3"
+                                                ></div>
+                                                <p
+                                                    class="category__text shop__sidebar__text"
+                                                >
+                                                    Weight Control
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div
+                                    class="p-1 mt-2 rounded wishlist wishlist-on-mobile"
+                                    role="button"
+                                >
+                                    <i class="fa-solid fa-heart-circle-check"></i>
+                                    <span>WishList</span>
+                                </div>
                             </div>
-                            <div
-                                class="p-1 mt-2 rounded wishlist wishlist-on-mobile"
-                                role="button"
-                            >
-                                <i class="fa-solid fa-heart-circle-check"></i>
-                                <span>WishList</span>
-                            </div>
-                        </div>
-                    </div> -->
+                        </div> -->
 
                     <div class="gap-3 list-products__header__sort d-flex">
                         <select name="sort" id="sort" class="options__select">
@@ -962,7 +986,7 @@
         </main>
 
         <footer
-            class="pb-6 text-center text-white footer pt-7 lg-text text-md-start"
+            class="pb-6 text-center text-white footer pt-7 lg-text text-md-start font"
         >
             <div class="container">
                 <div
@@ -1062,35 +1086,35 @@
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >Nón BẢO HIỂM TRƠN</a
+                                            >Nón Bảo Hiểm Trơn</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM CÓ KÍNH</a
+                                            >Nón bảo hiểm có kính</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM SƠN MÀI</a
+                                            >Nón Bảo Hiểm Sơn Mài</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM HỌA TIẾT</a
+                                            >Nón Bảo Hiểm Họa Tiết</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM 3/4</a
+                                            >Nón Bảo Hiểm 3/4</a
                                         >
                                     </li>
                                 </ul>
@@ -1106,28 +1130,28 @@
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >QUY ĐỊNH CHUNG</a
+                                            >Quy Định Chung</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >HƯỚNG DẪN TẠO TÀI KHOẢN</a
+                                            >Hướng Dẫn Tạo Tài Khoản</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >HƯỚNG DẪN MUA HÀNG</a
+                                            >Hướng Dẫn Mua Hàng</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >CHÍNH SÁCH ĐỔI SẢN PHẨM</a
+                                            >Chính Sách Đổi Sản Phẩm</a
                                         >
                                     </li>
                                 </ul>

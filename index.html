@@ -9,6 +9,7 @@
         <link rel="icon" type="image/png" href="images/iconhelmet.png" />
         <!-- Bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/font.css" />
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="css/fontawesome.css" />
@@ -26,12 +27,6 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
     </head>
     <!-- test git -->
 
@@ -43,7 +38,7 @@
             style="font-size: 14px"
         >
             <!-- test git hu -->
-            <div class="container-fluid">
+            <div class="container-fluid background-header">
                 <!-- the hamburger -->
                 <button
                     class="navbar-toggler"
@@ -51,13 +46,7 @@
                     data-bs-toggle="offcanvas"
                     data-bs-target="#navbar-on-mobile"
                 >
-                    <span
-                        class="navbar-toggler-icon"
-                        style="
-                            color: #3a5270 !important;
-                            background-color: #3a5270;
-                        "
-                    ></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- the brand -->
@@ -82,7 +71,7 @@
 
                 <!-- the nav bar on large screen => desktop -->
                 <div
-                    class="collapse navbar-collapse"
+                    class="collapse navbar-collapse font"
                     id="navbarSupportedContent"
                 >
                     <ul class="navbar-nav navbar-nav-1 ms-lg-6 mb-lg-0 fw-bold">
@@ -92,28 +81,31 @@
                                 aria-current="page"
                                 href="./index.html"
                             >
-                                <span class="nav-link-hover">Trang Chủ</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-link-hover" href="shop.html">
-                                <span class="nav-link-hover">Cửa Hàng</span>
+                                <span class="nav-link-hover">Trang chủ</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a
                                 class="nav-link nav-link-hover"
-                                href="about.html"
+                                href="./shop.html"
                             >
-                                <span class="nav-link-hover">Về Chúng Tôi</span>
+                                <span class="nav-link-hover">Cửa hàng</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a
                                 class="nav-link nav-link-hover"
-                                href="contact.html"
+                                href="./about.html"
                             >
-                                <span class="nav-link-hover">Liên Hệ</span>
+                                <span class="nav-link-hover">Về chúng tôi</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link nav-link-hover"
+                                href="./contact.html"
+                            >
+                                <span class="nav-link-hover">Liên hệ</span>
                             </a>
                         </li>
                     </ul>
@@ -121,13 +113,13 @@
                         class="navbar-nav navbar-nav-2 ms-auto mb-2 mb-lg-0 fw-bold d-flex"
                     >
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="store-locator.html">
+                            <a class="nav-link p-0" href="./store-locator.html">
                                 <span class="me-2"
                                     ><i
                                         class="fa-solid fa-location-dot text-primary"
                                     ></i
                                 ></span>
-                                Địa Chỉ
+                                Địa chỉ
                             </a>
                         </li>
                         <li class="nav-item dropdown dropstart account">
@@ -141,7 +133,7 @@
                         <li class="nav-item">
                             <a
                                 class="nav-link p-0"
-                                href="#"
+                                href="./cart.html"
                                 data-bs-toggle="offcanvas"
                                 data-bs-target="#shoppingCartOffcanvas"
                             >
@@ -173,13 +165,13 @@
 
         <!-- the shopping cart offcanvas -->
         <div
-            class="offcanvas offcanvas-end text-black"
+            class="offcanvas offcanvas-end text-black font"
             tabindex="-1"
             id="shoppingCartOffcanvas"
             aria-labelledby="offcanvasLabel"
         >
             <div class="offcanvas-header border-bottom py-4">
-                <h5 class="offcanvas-title" id="offcanvasLabel">Giỏ Hàng</h5>
+                <h5 class="offcanvas-title" id="offcanvasLabel">Giỏ hàng</h5>
                 <button
                     type="button"
                     class="btn-close"
@@ -210,7 +202,7 @@
         >
             <div class="offcanvas-header px-4 pt-4">
                 <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">
-                    MENU
+                    main menu
                 </h5>
                 <button
                     type="button"
@@ -229,7 +221,7 @@
                         <a
                             class="navbar-link-mobile text-decoration-none active"
                             href="./index.html"
-                            >Trang Chủ</a
+                            >Trang chủ</a
                         >
                     </li>
                     <li
@@ -238,7 +230,7 @@
                         <a
                             class="navbar-link-mobile text-decoration-none"
                             href="./shop.html"
-                            >Cửa Hàng</a
+                            >Cửa hàng</a
                         >
                     </li>
                     <li
@@ -247,7 +239,7 @@
                         <a
                             class="navbar-link-mobile text-decoration-none"
                             href="./about.html"
-                            >Về Chúng Tôi</a
+                            >Về chúng tôi</a
                         >
                     </li>
                     <li
@@ -256,7 +248,7 @@
                         <a
                             class="navbar-link-mobile text-decoration-none"
                             href="./contact.html"
-                            >Liên Hệ</a
+                            >Liên hệ</a
                         >
                     </li>
                     <li
@@ -281,7 +273,7 @@
                             class="navbar-link-mobile text-decoration-none p-0"
                             data-bs-toggle="modal"
                             data-bs-target="#signInModal"
-                            href="./register.html"
+                            href="#"
                         >
                             <span class="me-2"
                                 ><i class="fa-solid fa-user text-primary"></i
@@ -389,7 +381,7 @@
             </div>
         </div>
 
-        <main>
+        <main class="font">
             <header class="header pt-8 pb-7 text-white">
                 <div
                     id="imgHeading"
@@ -507,9 +499,9 @@
                                 class="play-button-container d-flex justify-content-center"
                             >
                                 <video
-                                    width="90%"
+                                    width="50%"
                                     height="600px"
-                                    poster="./images/thumbVideo.jpg"
+                                    poster="./images/thumbVideo.png"
                                 ></video>
                                 <a
                                     class="video-btn"
@@ -557,7 +549,7 @@
                     <div class="row">
                         <div class="col-md-4 position-relative">
                             <div class="mb-3">
-                                <h3 class="fw-bold display-7">
+                                <h3 class="fw-bold display-6">
                                     Gặp gỡ những người đã trải nghiệm nón bảo
                                     hiểm của chúng tôi
                                 </h3>
@@ -875,7 +867,7 @@
         </main>
 
         <footer
-            class="pb-6 text-center text-white footer pt-7 lg-text text-md-start"
+            class="pb-6 text-center text-white footer pt-7 lg-text text-md-start font"
         >
             <div class="container">
                 <div
@@ -893,8 +885,8 @@
                             ></i
                         ></span>
                         <p class="m-0 fw-bold">
-                            IUH NGUYỄN VĂN BẢO<br />
-                            số 12 Phường 1 Gò Vấp
+                            IUH Nguyễn Văn Bảo<br />
+                            Số 12 Phường 1 Gò Vấp
                         </p>
                     </div>
                     <div class="gap-2 open-time d-flex">
@@ -912,7 +904,7 @@
                         ></span>
                         <div>
                             <p class="m-0 fw-bold">Email Us:</p>
-                            <p class="m-0">16TYTH@GMAIL.COM</p>
+                            <p class="m-0">16TYTH@gmail.com</p>
                         </div>
                     </div>
                     <p class="m-0 phone-number fw-bold text-primary fs-2">
@@ -947,7 +939,7 @@
                                 href="register.html"
                                 class="py-3 btn btn-light fw-bold text-uppercase"
                             >
-                                THAM GIA
+                                Tham gia
                                 <span
                                     class="fa-stack super-sm-text ms-1"
                                     style="margin-bottom: 2px"
@@ -966,52 +958,50 @@
                         <div class="gap-5 row gap-md-0">
                             <div class="offset-md-2 col-md-2">
                                 <div class="mb-4">
-                                    <p class="fw-bold text-uppercase xl-text">
-                                        SẢN PHẨM
-                                    </p>
+                                    <p class="fw-bold xl-text">Sản phẩm</p>
                                 </div>
                                 <ul class="gap-2 list-unstyled vstack">
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >Nón BẢO HIỂM TRƠN</a
+                                            >Nón bảo hiểm trơn</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM CÓ KÍNH</a
+                                            >Nón bảo hiểm có kính</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM SƠN MÀI</a
+                                            >Nón bảo hiểm sơn mài</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM HỌA TIẾT</a
+                                            >Nón bảo hiểm họa tiết</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM 3/4</a
+                                            >Nón bảo tiểm 3/4</a
                                         >
                                     </li>
                                 </ul>
                             </div>
                             <div class="offset-md-2 col-md-2">
                                 <div class="mb-3">
-                                    <p class="fw-bold text-uppercase xl-text">
-                                        HỖ TRỢ KHÁCH HÀNG
+                                    <p class="fw-bold xl-text">
+                                        Hỗ trợ khách hàng
                                     </p>
                                 </div>
                                 <ul class="gap-2 list-unstyled vstack">
@@ -1019,36 +1009,36 @@
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >QUY ĐỊNH CHUNG</a
+                                            >Quy định chung</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >HƯỚNG DẪN TẠO TÀI KHOẢN</a
+                                            >Hướng dẫn tạo tài khoản</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >HƯỚNG DẪN MUA HÀNG</a
+                                            >Hướng dẫn mua hàng</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >CHÍNH SÁCH ĐỔI SẢN PHẨM</a
+                                            >Chính sách đổi sản phẩm</a
                                         >
                                     </li>
                                 </ul>
                             </div>
                             <div class="offset-md-2 col-md-2">
                                 <div class="mb-3">
-                                    <p class="fw-bold text-uppercase xl-text">
-                                        THÔNG TIN LIÊN HỆ
+                                    <p class="fw-bold xl-text">
+                                        Thông tin liên hệ
                                     </p>
                                 </div>
                                 <ul class="gap-2 list-unstyled vstack">
@@ -1056,35 +1046,35 @@
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >HOTLINE MUA HÀNG: 18007179</a
+                                            >Hotline mua hàng: 18007179</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >HOTLINE CSKH: 18007078</a
+                                            >Hotline CSKH: 18007078</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >EMAIL: 16TYTH@GMAIL.COM</a
+                                            >Email: 16TYTH@gmail.com</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >WEBSITE: NONSON.VN</a
+                                            >Website: nonson.vn</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >ĐỊA CHỈ: IUH TPHCM</a
+                                            >Địa chỉ: IUH TPHCM</a
                                         >
                                     </li>
                                 </ul>
@@ -1100,7 +1090,7 @@
                                 <span class="text-white">SHOPTEAM12</span>
                             </p>
 
-                            <p><b>THIẾT KẾ WEBSITE: </b>Nhóm 12</p>
+                            <p><b>Thiết kế website: </b>Nhóm 12</p>
                         </div>
                         <div class="ms-md-auto">
                             <a href="#" class="text-decoration-none">

@@ -8,6 +8,7 @@
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/font.css" />
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="css/fontawesome.css" />
@@ -35,10 +36,11 @@
 
     <body>
         <nav
-            class="navbar navbar-expand-lg navbar-dark position-absolute w-100 navigationAbout"
+            class="navbar navbar-expand-lg navbar-dark position-absolute w-100"
             style="font-size: 14px"
         >
-            <div class="container-fluid">
+            <!-- test git hu -->
+            <div class="container-fluid background-header">
                 <!-- the hamburger -->
                 <button
                     class="navbar-toggler"
@@ -46,13 +48,7 @@
                     data-bs-toggle="offcanvas"
                     data-bs-target="#navbar-on-mobile"
                 >
-                    <span
-                        class="navbar-toggler-icon"
-                        style="
-                            color: #3a5270 !important;
-                            background-color: #3a5270;
-                        "
-                    ></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- the brand -->
@@ -77,7 +73,7 @@
 
                 <!-- the nav bar on large screen => desktop -->
                 <div
-                    class="collapse navbar-collapse"
+                    class="collapse navbar-collapse font"
                     id="navbarSupportedContent"
                 >
                     <ul class="navbar-nav navbar-nav-1 ms-lg-6 mb-lg-0 fw-bold">
@@ -87,28 +83,31 @@
                                 aria-current="page"
                                 href="./index.html"
                             >
-                                <span class="nav-link-hover">Trang Chủ</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-link-hover" href="shop.html">
-                                <span class="nav-link-hover">Cửa Hàng</span>
+                                <span class="nav-link-hover">Trang chủ</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a
                                 class="nav-link nav-link-hover"
-                                href="about.html"
+                                href="./shop.html"
                             >
-                                <span class="nav-link-hover">Về Chúng Tôi</span>
+                                <span class="nav-link-hover">Cửa hàng</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a
-                                class="nav-link nav-link-hover active"
-                                href="contact.html"
+                                class="nav-link nav-link-hover"
+                                href="./about.html"
                             >
-                                <span class="nav-link-hover">Liên Hệ</span>
+                                <span class="nav-link-hover">Về chúng tôi</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active nav-link-hover"
+                                href="./contact.html"
+                            >
+                                <span class="nav-link-hover">Liên hệ</span>
                             </a>
                         </li>
                     </ul>
@@ -116,13 +115,13 @@
                         class="navbar-nav navbar-nav-2 ms-auto mb-2 mb-lg-0 fw-bold d-flex"
                     >
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="store-locator.html">
+                            <a class="nav-link p-0" href="./store-locator.html">
                                 <span class="me-2"
                                     ><i
                                         class="fa-solid fa-location-dot text-primary"
                                     ></i
                                 ></span>
-                                Địa Chỉ
+                                Địa chỉ
                             </a>
                         </li>
                         <li class="nav-item dropdown dropstart account">
@@ -136,7 +135,7 @@
                         <li class="nav-item">
                             <a
                                 class="nav-link p-0"
-                                href="#"
+                                href="./cart.html"
                                 data-bs-toggle="offcanvas"
                                 data-bs-target="#shoppingCartOffcanvas"
                             >
@@ -199,7 +198,7 @@
         >
             <div class="offcanvas-header px-4 pt-4">
                 <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">
-                    MENU
+                    main menu
                 </h5>
                 <button
                     type="button"
@@ -217,7 +216,7 @@
                     >
                         <a
                             class="navbar-link-mobile text-decoration-none active"
-                            href="./index.html"
+                            href="#"
                             >Trang Chủ</a
                         >
                     </li>
@@ -226,7 +225,7 @@
                     >
                         <a
                             class="navbar-link-mobile text-decoration-none"
-                            href="./shop.html"
+                            href="#"
                             >Cửa Hàng</a
                         >
                     </li>
@@ -235,7 +234,7 @@
                     >
                         <a
                             class="navbar-link-mobile text-decoration-none"
-                            href="./about.html"
+                            href="#"
                             >Về Chúng Tôi</a
                         >
                     </li>
@@ -244,7 +243,7 @@
                     >
                         <a
                             class="navbar-link-mobile text-decoration-none"
-                            href="./contact.html"
+                            href="#"
                             >Liên Hệ</a
                         >
                     </li>
@@ -253,7 +252,7 @@
                     >
                         <a
                             class="navbar-link-mobile text-decoration-none p-0"
-                            href="./store-locator.html"
+                            href="#"
                         >
                             <span class="me-2"
                                 ><i
@@ -270,7 +269,7 @@
                             class="navbar-link-mobile text-decoration-none p-0"
                             data-bs-toggle="modal"
                             data-bs-target="#signInModal"
-                            href="./register.html"
+                            href="#"
                         >
                             <span class="me-2"
                                 ><i class="fa-solid fa-user text-primary"></i
@@ -378,7 +377,7 @@
             </div>
         </div>
 
-        <section class="breadcrumb-wrapper bg-black text-white pt-8 pb-8">
+        <section class="breadcrumb-wrapper bg-black text-white pt-8 pb-8 font">
             <div class="container">
                 <div class="row">
                     <div
@@ -388,7 +387,7 @@
                         <h2 class="fw-bold display-2">LIÊN HỆ</h2>
                         <div class="d-flex gap-2 lg-text">
                             <a
-                                href="./index.html"
+                                href="home.html"
                                 class="m-0 text-decoration-none link-light"
                                 >Home Page</a
                             >
@@ -406,7 +405,7 @@
             </div>
         </section>
 
-        <main id="contact">
+        <main id="contact" class="font">
             <div class="section-one">
                 <div class="container">
                     <div class="row d-flex justify-content-between">
@@ -561,7 +560,7 @@
         </main>
 
         <footer
-            class="pb-6 text-center text-white footer pt-7 lg-text text-md-start"
+            class="pb-6 text-center text-white footer pt-7 lg-text text-md-start font"
         >
             <div class="container">
                 <div
@@ -661,35 +660,35 @@
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >Nón BẢO HIỂM TRƠN</a
+                                            >Nón Bảo Hiểm Trơn</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM CÓ KÍNH</a
+                                            >Nón bảo hiểm có kính</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM SƠN MÀI</a
+                                            >Nón Bảo Hiểm Sơn Mài</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM HỌA TIẾT</a
+                                            >Nón Bảo Hiểm Họa Tiết</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >NÓN BẢO HIỂM 3/4</a
+                                            >Nón Bảo Hiểm 3/4</a
                                         >
                                     </li>
                                 </ul>
@@ -705,28 +704,28 @@
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >QUY ĐỊNH CHUNG</a
+                                            >Quy Định Chung</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >HƯỚNG DẪN TẠO TÀI KHOẢN</a
+                                            >Hướng Dẫn Tạo Tài Khoản</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >HƯỚNG DẪN MUA HÀNG</a
+                                            >Hướng Dẫn Mua Hàng</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
                                             class="text-white-50 text-decoration-none"
-                                            >CHÍNH SÁCH ĐỔI SẢN PHẨM</a
+                                            >Chính Sách Đổi Sản Phẩm</a
                                         >
                                     </li>
                                 </ul>
