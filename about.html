@@ -32,6 +32,11 @@
                     url("./images/bgAbout.webp") center center no-repeat;
                 background-size: cover;
             }
+
+            .hover-scale:hover {
+                transform: scale(1.05);
+                transition: 0.3s ease-in-out;
+            }
         </style>
     </head>
 
@@ -166,6 +171,223 @@
                 </div>
             </div>
         </nav>
+        <!-- the shopping cart offcanvas -->
+        <div
+            class="offcanvas offcanvas-end text-black font"
+            tabindex="-1"
+            id="shoppingCartOffcanvas"
+            aria-labelledby="offcanvasLabel"
+        >
+            <div class="offcanvas-header border-bottom py-4">
+                <h5 class="offcanvas-title" id="offcanvasLabel">Giỏ hàng</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                ></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <p class="text-black-50 text-center xxl-text cart-show-body">
+                    Hiện chưa có sản phẩm nào trong giỏ hàng
+                </p>
+            </div>
+
+            <!-- <div class="offcanvas-body">
+             <p class="text-black-50 text-center xxl-text cart-show-body">
+                 No products in the cart
+             </p>
+         </div> -->
+        </div>
+
+        <!-- the nav bar canvas on small screen => mobile  -->
+        <div
+            class="offcanvas offcanvas-start text-bg-light"
+            tabindex="-1"
+            id="navbar-on-mobile"
+            style="z-index: 1055"
+        >
+            <div class="offcanvas-header px-4 pt-4">
+                <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">
+                    main menu
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul
+                    class="navbar-nav-mobile fw-bold list-group list-group-flush"
+                >
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none active"
+                            href="./index.html"
+                            >Trang chủ</a
+                        >
+                    </li>
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none"
+                            href="./shop.html"
+                            >Cửa hàng</a
+                        >
+                    </li>
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none"
+                            href="./about.html"
+                            >Về chúng tôi</a
+                        >
+                    </li>
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none"
+                            href="./contact.html"
+                            >Liên hệ</a
+                        >
+                    </li>
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none p-0"
+                            href="./store-locator.html"
+                        >
+                            <span class="me-2"
+                                ><i
+                                    class="fa-solid fa-location-dot text-primary"
+                                ></i
+                            ></span>
+                            Địa Chỉ
+                        </a>
+                    </li>
+                    <li
+                        class="navbar-item-mobile list-group-item p-0 py-2 mx-3 dropdown dropstart"
+                    >
+                        <a
+                            class="navbar-link-mobile text-decoration-none p-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#signInModal"
+                            href="#"
+                        >
+                            <span class="me-2"
+                                ><i class="fa-solid fa-user text-primary"></i
+                            ></span>
+                            Đăng Nhập
+                        </a>
+                        <!-- Modal -->
+                        <div
+                            class="modal fade"
+                            id="signInModal"
+                            data-bs-backdrop="static"
+                            data-bs-keyboard="false"
+                            style="z-index: 1800"
+                        >
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header border-bottom-0">
+                                        <button
+                                            type="button"
+                                            class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"
+                                        ></button>
+                                    </div>
+                                    <div class="modal-body p-0">
+                                        <div
+                                            class="sign-in px-4 pt-3 pb-3 bg-light text-black w-100"
+                                        >
+                                            <div
+                                                class="d-flex justify-content-between"
+                                            >
+                                                <h3>Đăng nhập</h3>
+                                                <a href="#" class="text-primary"
+                                                    >Tạo tài khoản</a
+                                                >
+                                            </div>
+                                            <form class="mb-3">
+                                                <div class="mb-3">
+                                                    <label
+                                                        for="username"
+                                                        class="form-label"
+                                                        >Tên tài khoản hoặc
+                                                        email<span
+                                                            class="text-danger"
+                                                            >*</span
+                                                        ></label
+                                                    >
+                                                    <input
+                                                        class="form-control text-black"
+                                                        type="text"
+                                                        id="username"
+                                                        placeholder="Username"
+                                                    />
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label
+                                                        for="password"
+                                                        class="form-label"
+                                                        >Mật khẩu
+                                                        <span
+                                                            class="text-danger"
+                                                            >*</span
+                                                        ></label
+                                                    >
+                                                    <input
+                                                        class="form-control text-black"
+                                                        type="text"
+                                                        id="password"
+                                                        placeholder="Password"
+                                                    />
+                                                </div>
+                                                <div class="d-grid">
+                                                    <button
+                                                        class="btn btn-primary fw-bold text-uppercase"
+                                                    >
+                                                        Đăng nhập
+                                                        <span
+                                                            class="fa-stack sm-text ms-1"
+                                                            style="
+                                                                margin-bottom: 1px;
+                                                            "
+                                                        >
+                                                            <i
+                                                                class="fas fa-circle fa-stack-2x text-black"
+                                                            ></i>
+                                                            <i
+                                                                class="fas fa-play fa-stack-1x text-primary"
+                                                            ></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                            <div class="text-end">
+                                                <p class="text-primary">
+                                                    Quên mật khẩu?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <section
             class="breadcrumb-wrapper bg-black text-white pt-8 pb-8 bgAbout font"
@@ -212,7 +434,7 @@
 
                     <div class="row gdtk">
                         <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
+                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center hover-scale"
                         >
                             <div class="icon wrap_img_About">
                                 <img src="./images/tk1.jpg" alt="" />
@@ -222,7 +444,7 @@
                             </div>
                         </div>
                         <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
+                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center hover-scale"
                         >
                             <div class="icon wrap_img_About">
                                 <img src="./images/tk2.webp" alt="" />
@@ -232,7 +454,7 @@
                             </div>
                         </div>
                         <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
+                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center hover-scale"
                         >
                             <div class="icon wrap_img_About">
                                 <img src="./images/tk3.png" alt="" />
@@ -242,7 +464,7 @@
                     </div>
                     <div class="row gdtk">
                         <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
+                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center hover-scale"
                         >
                             <div class="icon wrap_img_About">
                                 <img src="./images/tk4.jpg" alt="" />
@@ -250,7 +472,7 @@
                             <div class="gdsx_title title-animal">ÉP XỐP</div>
                         </div>
                         <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
+                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center hover-scale"
                         >
                             <div class="icon wrap_img_About">
                                 <img src="./images/tk5.jpg" alt="" />
@@ -258,7 +480,7 @@
                             <div class="gdsx_title title-animal">LÀM MỘC</div>
                         </div>
                         <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
+                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center hover-scale"
                         >
                             <div class="icon wrap_img_About">
                                 <img src="./images/tk6.jpg" alt="" />
@@ -270,7 +492,7 @@
                     </div>
                     <div class="row gdtk">
                         <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
+                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center hover-scale"
                         >
                             <div class="icon wrap_img_About">
                                 <img src="./images/tk7.jpg" alt="" />
@@ -278,7 +500,7 @@
                             <div class="gdsx_title title-animal">DÁN TEM</div>
                         </div>
                         <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
+                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center hover-scale"
                         >
                             <div class="icon wrap_img_About">
                                 <img src="./images/tk8.webp" alt="" />
@@ -286,7 +508,7 @@
                             <div class="gdsx_title title-animal">LÁP RÁP</div>
                         </div>
                         <div
-                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center"
+                            class="col-xl-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-center hover-scale"
                         >
                             <div class="icon wrap_img_About">
                                 <img src="./images/tk9.jpg" alt="" />

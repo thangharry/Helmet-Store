@@ -1,6 +1,8 @@
+function formatPrice(price) {
+    return price.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
 let dataProductCurrent = dataProductAll;
-// const startRange = document.querySelector(".range__value-start");
-// const endRange = document.querySelector(".range__value-end");
 
 const priceStart = document.querySelector(".price-start");
 const priceEnd = document.querySelector(".price-end");
@@ -11,8 +13,8 @@ const rangeBlack = this.document.querySelector(".range__black");
 let leftS = rangeValueStart.getBoundingClientRect().left;
 let leftE = rangeValueEnd.getBoundingClientRect().left;
 function setMaxMinFilter(max, min) {
-    priceStart.textContent = min;
-    priceEnd.textContent = max;
+    priceStart.textContent = formatPrice(min);
+    priceEnd.textContent = formatPrice(max);
 }
 setMaxMinFilter(
     Math.max(...dataProductAll.map((item) => item.price)),
@@ -38,10 +40,10 @@ rangeValueStart.addEventListener("mousedown", function (e) {
         }
         temp =
             (posX / width) *
-            (Math.max(...dataProductAll.map((item) => item.price)) -
-                Math.min(...dataProductAll.map((item) => item.price))) +
+                (Math.max(...dataProductAll.map((item) => item.price)) -
+                    Math.min(...dataProductAll.map((item) => item.price))) +
             Math.min(...dataProductAll.map((item) => item.price));
-        priceStart.textContent = temp.toFixed(2);
+        priceStart.textContent = formatPrice(temp);
         rangeValueStart.style.left = posX + "px";
         rangeBlack.style.left = posX + 10 + "px";
         rangeBlack.style.width = leftE - leftS + "px";
@@ -73,10 +75,10 @@ rangeValueEnd.addEventListener("mousedown", function (e) {
         }
         temp =
             (posX / width) *
-            (Math.max(...dataProductAll.map((item) => item.price)) -
-                Math.min(...dataProductAll.map((item) => item.price))) +
+                (Math.max(...dataProductAll.map((item) => item.price)) -
+                    Math.min(...dataProductAll.map((item) => item.price))) +
             Math.min(...dataProductAll.map((item) => item.price));
-        priceEnd.textContent = temp.toFixed(2);
+        priceEnd.textContent = formatPrice(temp);
         rangeValueEnd.style.left = posX + "px";
         rangeBlack.style.width = leftE - leftS + "px";
     }
@@ -99,52 +101,9 @@ categoryDropdown.addEventListener("click", function (e) {
 });
 const range = document.querySelector(".range-main");
 
-// const filterRange = document.querySelector(".filter-range");
-
-// range.addEventListener("input", function (e) {
-//     const rangeMainWidth = range.offsetWidth;
-//     const rangeSLiderThumbs = [
-//         ...document.querySelectorAll(".range-slider-thumb"),
-//     ];
-//     const valueStart = document.querySelector(".range__value-start").value;
-//     const valueEnd = document.querySelector(".range__value-end").value;
-//     const rangeBlack = document.querySelector(".range-black");
-//     rangeBlack.style.left = `${
-//         (valueStart /
-//             Math.max(...dataProductCurrent.map((item) => item.price))) *
-//             rangeMainWidth -
-//         24
-//     }px`;
-//     const maxValue = Math.max(
-//         ...dataProductCurrent.map((item) => item.price)
-//     );
-//     rangeBlack.style.width = `${
-//         ((valueEnd - valueStart) / maxValue) * rangeMainWidth + 8
-//     }px`;
-//     const priceStart = document.querySelector(".price-start");
-//     const priceEnd = document.querySelector(".price-end");
-//     priceStart.textContent = valueStart;
-//     priceEnd.textContent = valueEnd;
-// });
-// range.addEventListener("click", function (e) {
-//     const start = document.querySelector(".range__value-start");
-//     const end = document.querySelector(".range__value-end");
-
-//     if (e.target === start) {
-//         start.classList.remove("z-index-999");
-//         end.classList.add("z-index-999");
-//     }
-//     if (e.target === end) {
-//         end.classList.remove("z-index-999");
-//         start.classList.add("z-index-999");
-//     }
-// });
-
-// cart
-// this.localStorage.removeItem(storageCart);
-
 // categories
 const categoriesValue = document.querySelectorAll(".category__text");
+console.log(categoriesValue);
 const categoriesIconSelect = document.querySelectorAll(
     ".category__icon-select"
 );
@@ -203,7 +162,9 @@ function handleCategories() {
         });
     });
 }
-handleCategories();
+document.addEventListener("DOMContentLoaded", function () {
+    handleCategories();
+});
 // brand
 const brandsValue = document.querySelectorAll(".product__brand__text");
 const brandsIconSelect = document.querySelectorAll(
@@ -273,39 +234,48 @@ function renderViewTable(data) {
             discount = false;
         }
         if (index < currentPage * 12 && index >= (currentPage - 1) * 12) {
+            // Calculate the discounted price
+            const discountedPrice = (item.price * (100 - item.discount)) / 100;
+
             return `
                     <div class="products-item position-relative">
-                        <span class="product-item-discount ${discount ? "" : " d-none"
-                }">-${item.discount}%</span>
-                        <img src=${item.imgUrl} alt=${item.name
-                } class="product-item-img" />
+                        <span class="product-item-discount ${
+                            discount ? "" : " d-none"
+                        }">-${item.discount}%</span>
+                        <img src=${item.imgUrl} alt=${
+                item.name
+            } class="product-item-img" />
                         <p class="product-item-name">${item.name}</p>
                         <div class="product__group-prices">
-                            <p class=${discount ? "real__price" : "normal__price"
-                }>${item.price.toFixed(3)} VND</p>
-                            <p class="sale__price ${discount ? "" : " d-none"
-                }">${(
-                    (item.price * (100 - item.discount)) /
-                    100
-                ).toFixed(3)} VND</p>
+                            <p class=${
+                                discount ? "real__price" : "normal__price"
+                            }>${formatPrice(item.price)} VND</p>
+                            <p class="sale__price ${
+                                discount ? "" : " d-none"
+                            }">${formatPrice(discountedPrice)} VND</p>
                         </div>
                         <div class="product__actions d-flex flex-column align-items-center justify-content-between gap-2 position-absolute p-3 top-0 start-0 w-100 h-100" style="background-color: rgba(256, 256, 256, 0.5);z-index:-10;transform:translateY(80px);border:3px solid rgb(255, 174, 0);opacity:0;visibility:hidden;border-radius:30px">
                             <div class="product__actions__group-1 d-flex gap-3 position-relative" style="z-index:999">
-                                <a href="./shop-details.html" class="fa-solid fa-link product-details-link" data-productLink=${item.code
-                }></a>
-                                <i class="fa-regular fa-heart ${(storageFavoriteValue || []).includes(
-                    item.code
-                )
-                    ? " heart-selected"
-                    : ""
-                }" data-codeProduct=${item.code
-                }></i><i class="fa-solid fa-repeat"></i>
+                                <a href="./shop-details.html" class="fa-solid fa-link product-details-link" data-productLink=${
+                                    item.code
+                                }></a>
+                                <i class="fa-regular fa-heart ${
+                                    (storageFavoriteValue || []).includes(
+                                        item.code
+                                    )
+                                        ? " heart-selected"
+                                        : ""
+                                }" data-codeProduct=${
+                item.code
+            }></i><i class="fa-solid fa-repeat"></i>
                             </div>
-                            <div data-codeProduct=${item.code
-                } class="product__actions__group-2 d-flex align-items-center cart-in-product ${(storageCartValue || []).includes(item.code)
+                            <div data-codeProduct=${
+                                item.code
+                            } class="product__actions__group-2 d-flex align-items-center cart-in-product ${
+                (storageCartValue || []).includes(item.code)
                     ? " cart-selected"
                     : ""
-                }" style="color: white;max-width:100%; background-color: rgb(255, 174, 0);padding:5px 10px; border-radius:30px">
+            }" style="color: white;max-width:100%; background-color: rgb(255, 174, 0);padding:5px 10px; border-radius:30px">
                                 <span>ADD TO CART</span>
                                 <i class="fa-solid fa-cart-shopping text-black border-0 bg-transparent"></i>
                             </div>
@@ -325,6 +295,9 @@ function renderViewList(data) {
             discount = false;
         }
         if (index < currentPage * 12 && index >= (currentPage - 1) * 12) {
+            // Calculate the discounted price
+            const discountedPrice = (item.price * (100 - item.discount)) / 100;
+
             return `
                     <div class="list-products__body-list__item d-flex align-items-start gap-5 p-5 border border-subtle">
                         <div class="products__body-list__item__left">
@@ -341,28 +314,31 @@ function renderViewList(data) {
                                 ${item.desc}
                             </p>
                             <div class="product__group-prices">
-                                <p class=${discount ? "real__price" : "normal__price"
-                }>$${item.price.toFixed(2)}</p>
-                                <p class="sale__price ${discount ? "" : " d-none"
-                }">$${(
-                    (item.price * (100 - item.discount)) /
-                    100
-                ).toFixed(2)}</p>
+                                <p class=${
+                                    discount ? "real__price" : "normal__price"
+                                }>${formatPrice(item.price)} VND</p>
+                                <p class="sale__price ${
+                                    discount ? "" : " d-none"
+                                }">${formatPrice(discountedPrice)} VND</p>
                             </div>
                             <div class="product__actions d-flex gap-2">
-                                <a href="./shop-details.html" class="fa-solid fa-link product-details-link" data-productLink=${item.code
-                }></a>
-                                <i class="fa-regular fa-heart  ${(storageFavoriteValue || []).includes(
-                    item.code
-                )
-                    ? " heart-selected"
-                    : ""
-                }" data-codeProduct=${item.code
-                }></i><i class="fa-solid fa-repeat"></i>
-                                <i class="fa-solid fa-cart-shopping  cart-in-product ${(storageCartValue || []).includes(item.code)
-                    ? " cart-selected"
-                    : ""
-                }" data-codeProduct=${item.code}></i>
+                                <a href="./shop-details.html" class="fa-solid fa-link product-details-link" data-productLink=${
+                                    item.code
+                                }></a>
+                                <i class="fa-regular fa-heart  ${
+                                    (storageFavoriteValue || []).includes(
+                                        item.code
+                                    )
+                                        ? " heart-selected"
+                                        : ""
+                                }" data-codeProduct=${
+                item.code
+            }></i><i class="fa-solid fa-repeat"></i>
+                                <i class="fa-solid fa-cart-shopping  cart-in-product ${
+                                    (storageCartValue || []).includes(item.code)
+                                        ? " cart-selected"
+                                        : ""
+                                }" data-codeProduct=${item.code}></i>
                             </div>
                         </div>
                     </div>`;
@@ -392,21 +368,24 @@ function renderPagination(data) {
         pagination.innerHTML = temp;
     } else {
         for (i = 1; i <= numberOfPages; i++) {
-            temp += `<div class="pagination-num ${currentPage == i ? "pagination-num--active" : ""
-                }">${i}</div>`;
+            temp += `<div class="pagination-num ${
+                currentPage == i ? "pagination-num--active" : ""
+            }">${i}</div>`;
         }
 
         pagination.innerHTML = `
-                <div class="pagination-pre  ${currentPage == 1 ? " d-none" : ""
-            } ${currentPage > 1 ? "d-block" : ""}">
+                <div class="pagination-pre  ${
+                    currentPage == 1 ? " d-none" : ""
+                } ${currentPage > 1 ? "d-block" : ""}">
                     <i class="fa-solid fa-chevron-left"></i>
                     PRE
                 </div>
                 ${temp}
-                <div class="pagination-next ${numberOfPages > 1 && currentPage !== numberOfPages
-                ? ""
-                : " d-none"
-            }"> 
+                <div class="pagination-next ${
+                    numberOfPages > 1 && currentPage !== numberOfPages
+                        ? ""
+                        : " d-none"
+                }"> 
                     NEXT 
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>`;
@@ -534,8 +513,8 @@ optionsSort.addEventListener("input", function (e) {
 function assignFilterPrice() {
     const filterPrice = this.document.querySelector(".filter__btn");
     filterPrice.addEventListener("click", function (e) {
-        const start = parseInt(priceStart.textContent);
-        const end = parseInt(priceEnd.textContent);
+        const start = parseInt(priceStart.textContent.replace(/\./g, ""));
+        const end = parseInt(priceEnd.textContent.replace(/\./g, ""));
         const dataFilterPrice = dataProductAll.filter(function (item) {
             return (
                 (item.price * (100 - item.discount)) / 100 >= start &&
