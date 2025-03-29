@@ -54,11 +54,12 @@ function assignCartEvent() {
             e.currentTarget.classList.toggle("cart-selected");
             const codeSP = e.currentTarget.getAttribute("data-codeProduct");
             quantityOfCurrentProduct.setAttribute("data-CodeSP", `${codeSP}`);
-            quantityOfCurrentProduct.textContent = `${e.target.previousElementSibling?.tagName.toLowerCase() ===
-                    "input"
+            quantityOfCurrentProduct.textContent = `${
+                e.target.previousElementSibling?.tagName.toLowerCase() ===
+                "input"
                     ? e.target.previousElementSibling.value
                     : 1
-                }`;
+            }`;
             const qtyStorage = quantityOfCurrentProduct.textContent;
             if (e.currentTarget.classList.contains("cart-selected")) {
                 storageCartValue.push(codeSP);
@@ -129,7 +130,7 @@ function getTotalPriceInCart() {
             return (item.price * (100 - item.discount) * temp) / 100;
         })
         .reduce((accumulator, currentValue) => accumulator + currentValue, 0)
-        .toFixed(3);
+        .toFixed(0);
 }
 function renderCart() {
     dataCart = dataProductAll.filter(function (item) {
@@ -143,29 +144,33 @@ function renderCart() {
             discount = false;
         }
         return `
-                <div class=" d-flex align-items-center cart-show-fix mb-4 gap-4" style="position:relative" data-codeSPCommon=${item.code
-            }>
+                <div class=" d-flex align-items-center cart-show-fix mb-4 gap-4" style="position:relative" data-codeSPCommon=${
+                    item.code
+                }>
                     <div class="">
-                        <img class="border border-grey border-1 rounded-3" src=${item.imgUrl
-            } style="max-width:90px" alt=${item.name}/>
+                        <img class="border border-grey border-1 rounded-3" src=${
+                            item.imgUrl
+                        } style="max-width:90px" alt=${item.name}/>
                     </div>
                     <div class=" d-flex flex-column gap-2 align-items-start">
                         <a class="list-products__item__name" style="display: block; font-size: 16px; line-height: 1.3;">
                             ${item.name}
                         </a>
                         <div class="product__group-prices">
-                            <p class="w-100 m-0 ${discount ? " real__price" : "normal__price"
-            }">${item.price.toFixed(3)} VNĐ</p>
-                            <p class="w-100 m-0 sale__price ${discount ? "" : " d-none"
-            }" >${(
-                (item.price * (100 - item.discount)) /
-                100
-            ).toFixed(3)}VNĐ</p>
+                            <p class="w-100 m-0 ${
+                                discount ? " real__price" : "normal__price"
+                            }">${item.price} VNĐ</p>
+                            <p class="w-100 m-0 sale__price ${
+                                discount ? "" : " d-none"
+                            }" >${
+            (item.price * (100 - item.discount)) / 100
+        }VNĐ</p>
                         </div>
-                        <div class="lg-text">Số Lượng: ${storageQtyCartValue[
-            storageCartValue.indexOf(item.code)
-            ]
-            }</div>
+                        <div class="lg-text">Số Lượng: ${
+                            storageQtyCartValue[
+                                storageCartValue.indexOf(item.code)
+                            ]
+                        }</div>
                     </div>
                     <div class="cart-remove"
                         style="cursor:pointer;position:absolute;color:gray;z-index:99;top:0;right:0;height:20px;width:20px"><svg

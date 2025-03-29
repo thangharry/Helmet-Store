@@ -1,3 +1,5 @@
+//nhận 1 price làm đầu vào định dạng thành 1 chuỗi với phân cách hàng nghìn bằng dấu chấm
+
 function formatPrice(price) {
     return price.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
@@ -11,51 +13,64 @@ const rangeValueStart = this.document.querySelector(".range__value-start");
 const rangeValueEnd = this.document.querySelector(".range__value-end");
 const rangeBlack = this.document.querySelector(".range__black");
 let leftS = rangeValueStart.getBoundingClientRect().left;
+
 let leftE = rangeValueEnd.getBoundingClientRect().left;
+//nhận 2 tham số max và min
 function setMaxMinFilter(max, min) {
+    //gán gtri max và min đã format ở hàm trên
     priceStart.textContent = formatPrice(min);
     priceEnd.textContent = formatPrice(max);
 }
 setMaxMinFilter(
+    //tính giá trị tối đa từ mảng dataProductAll
     Math.max(...dataProductAll.map((item) => item.price)),
+    //tính giá trị nhỏ  nhất từ dataProductAll
     Math.min(...dataProductAll.map((item) => item.price))
 );
 rangeValueStart.addEventListener("mousedown", function (e) {
+    // tạo hình chữ nhật bao quanh của phần tử rangeMain
     let { left, right, width, height } = rangeMain.getBoundingClientRect();
     let temp;
     console.log(left, right, width, height);
-
+    // khi chuột di chuyển trong khi nút chuột vẫn được nhấn xuống
     function handleMouseMove(e) {
+        //tính vị trí ngang của chuột và độ lẹch của chuột so với tay cầm
         let posX = e.clientX - left - 10;
         leftS = rangeValueStart.getBoundingClientRect().left;
-
+        // kiểm tra vị trí ngang của chuột có vượt quá chiều rộng cảu phần tử rangeMain ko
         if (posX > width) {
             posX = width;
         }
+        //kiểm tra có nhỏ hơn 0 ko nếu có cho = 0
         if (posX < 0) {
             posX = 0;
         }
+        // kiểm tra vị trí tọa độ kết thúc có bằng tọa độ ban đầu ko nếu quá thì sẽ xóa trình lắng nghe
         if (leftE <= leftS + 20) {
             document.removeEventListener("mousemove", handleMouseMove);
         }
+        //tính chuyển đổi giá trị của tay cầm thành 1 gtri
         temp =
             (posX / width) *
                 (Math.max(...dataProductAll.map((item) => item.price)) -
                     Math.min(...dataProductAll.map((item) => item.price))) +
             Math.min(...dataProductAll.map((item) => item.price));
+        //cập nhật nội dung văn bản thành giá đã tính
         priceStart.textContent = formatPrice(temp);
+
+        //đặt css
         rangeValueStart.style.left = posX + "px";
         rangeBlack.style.left = posX + 10 + "px";
         rangeBlack.style.width = leftE - leftS + "px";
     }
-
+    //thực thi nhấn chuột váo và ra
     document.addEventListener("mousemove", handleMouseMove);
 
     document.addEventListener("mouseup", function () {
         document.removeEventListener("mousemove", handleMouseMove);
     });
 });
-
+//sử lí khi chuột được nhấn
 rangeValueEnd.addEventListener("mousedown", function (e) {
     let { left, right, width, height } = rangeMain.getBoundingClientRect();
     console.log(left, right, width, height);
@@ -70,6 +85,7 @@ rangeValueEnd.addEventListener("mousedown", function (e) {
         if (posX < 0) {
             posX = 0;
         }
+        // cập nhật biến với vijtrij bên trái hiện tại
         if (leftE <= leftS + 20) {
             document.removeEventListener("mousemove", handleMouseMove);
         }
@@ -91,6 +107,7 @@ rangeValueEnd.addEventListener("mousedown", function (e) {
 });
 
 // shop
+//sử lý trình thả xuống
 const categoryDropdown = document.querySelector(".category__dropdown");
 categoryDropdown.addEventListener("click", function (e) {
     const categoryDropdownIcon = document.querySelector(
