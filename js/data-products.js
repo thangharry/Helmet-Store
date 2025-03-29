@@ -5,7 +5,7 @@ const productList = [
         imgUrl: "./images/tron-1.png",
         name: "NÓN BẢO HIỂM ATG-DN052",
         discount: 50,
-        price: 239000,
+        price: 240000,
         categories: ["Vitamins", "Supplements", "Nón Bảo Hiểm Trơn"],
         desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, doloribus ut omnis obcaecati excepturi facilis placeat, reprehenderit sed quo ad labore inventore illum nihil molestias rerum quaerat pariatur tempora. Consectetur!",
         brand: "Nón Bảo Hiểm Trơn",

@@ -31,20 +31,21 @@ function showCartOnTable() {
                 <tr data-codeSPCommon=${item.code}>
                     <td>
                         <a class="d-flex align-items-center gap-3 text-decoration-none cursor-pointer product-link">
-                            <img style="max-width: 100px;" src="${item.imgUrl
-            }" alt="">
+                            <img style="max-width: 100px;" src="${
+                                item.imgUrl
+                            }" alt="">
                             <p class="mb-0">${item.name}</p>
                         </a>
                     </td>
                     <td>
-                        <p class="mb-0">${(
-                (item.price * (100 - item.discount)) /
-                100
-            ).toFixed(3)} VNĐ</p>
+                        <p class="mb-0">${
+                            (item.price * (100 - item.discount)) / 100
+                        } VNĐ</p>
                     </td>
                     <td>
-                        <input style="max-width: 100px" class="quantity form-control" type="number" value="${ListQtyCart[ListCart.indexOf(item.code)]
-            }" min=1 max=100    >
+                        <input style="max-width: 100px" class="quantity form-control" type="number" value="${
+                            ListQtyCart[ListCart.indexOf(item.code)]
+                        }" min=1 max=100    >
                     </td>
                    
                     <td>
